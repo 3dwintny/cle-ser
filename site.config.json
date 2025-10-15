@@ -1,0 +1,52 @@
+{
+  "brand": "Elizabeth's Cleaning Service",
+  "phone": "(562)-639-2990",
+  "whatsapp": "+1-562-639-2990",
+  "social": {
+    "twitter": "#",
+    "facebook": "#",
+    "instagram": "#"
+  },
+  "services": [
+    "Apartment Cleaning",
+    "House Cleaning",
+    "Maid Service",
+    "Specialty Cleaning",
+    "Move In/Out Cleaning",
+    "Holiday Cleaning"
+  ],
+  "additionalServices": [
+    {
+      "title": "Warehouse & Offices",
+      "subtitle": "Keep your workplace spotless and organized",
+      "image": "office.jpg"
+    },
+    {
+      "title": "Windows",
+      "subtitle": "Professional window cleaning",
+      "image": "windows.jpg"
+    },
+    {
+      "title": "Vacuuming",
+      "subtitle": "Deep vacuum service",
+      "image": "vacuum.jpg"
+    }
+  ],
+  "team": [
+    {
+      "name": "Elizabeth Carter",
+      "role": "Founder",
+      "image": "founder.jpg"
+    },
+    {
+      "name": "Team Member 1",
+      "role": "Staff",
+      "image": "member1.jpg"
+    },
+    {
+      "name": "Team Member 2",
+      "role": "Staff",
+      "image": "member2.jpg"
+    }
+  ]
+}

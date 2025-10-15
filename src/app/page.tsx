@@ -1,103 +1,243 @@
-import Image from "next/image";
+'use client';
+
+import Link from 'next/link';
+import Button from '@/components/Button';
+import Chip from '@/components/Chip';
+import { Card, CardHeader, CardBody } from '@/components/Card';
+import PhotoSlider from '@/components/PhotoSlider';
+import siteConfig from '../../site.config.json';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <>
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-500/20 to-blue-200/20">
+        {/* Background Image - Products of cleaning */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/30 to-blue-200/30"></div>
+        
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-20 left-10 w-32 h-32 bg-white/20 rounded-full"></div>
+          <div className="absolute top-40 right-20 w-24 h-24 bg-white/20 rounded-full"></div>
+          <div className="absolute bottom-32 left-1/4 w-20 h-20 bg-white/20 rounded-full"></div>
+          <div className="absolute bottom-20 right-1/3 w-28 h-28 bg-white/20 rounded-full"></div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+        {/* Content - Two Column Layout */}
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            
+            {/* Left Column - Content */}
+            <div className="text-center lg:text-left">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                {siteConfig.brand}
+              </h1>
+              <p className="text-xl sm:text-2xl text-gray-800 mb-6">
+                Professional Home & Office Cleaning Services
+              </p>
+              <div className="mb-8">
+                <p className="text-lg text-gray-700 leading-relaxed">
+                  <span className="font-semibold text-yellow-600">Trusted cleaning</span> for your home and office. 
+                  Our professional team guarantees exceptional service with eco-friendly products and advanced techniques. 
+                  <span className="font-semibold text-gray-800">Your perfect space, every visit!</span>
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <a href="tel:+1-562-639-2990">
+                  <Button size="lg" className="bg-black hover:bg-gray-800 text-white shadow-lg border border-gray-300">
+                    📞 Call Now
+                  </Button>
+                </a>
+                <Link href="/contact">
+                  <Button variant="outline" size="lg" className="border-2 border-yellow-600 text-yellow-600 hover:bg-yellow-600 hover:text-white shadow-lg">
+                    Get Quote
+                  </Button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Column - Photo Slider */}
+            <div className="flex justify-center lg:justify-end">
+              <PhotoSlider />
+            </div>
+            
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+          <div className="w-6 h-10 border-2 border-gray-900/50 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-gray-900/50 rounded-full mt-2 animate-bounce"></div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tagline Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+          <p className="text-2xl sm:text-3xl font-medium text-gray-900">
+            {siteConfig.brand} — We scrub, you relax — it's that simple.
+          </p>
+        </div>
+      </section>
+
+      {/* Value Proposition */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Scrubbed spotless outshines the rest!
+            </h2>
+            <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+              Our professional staff cares for your home as if it was our own.
+            </h3>
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+              We understand that a clean and healthy environment is essential for your well-being and productivity. 
+              Our team uses eco-friendly products and advanced cleaning techniques to ensure your space is not only 
+              spotless but also safe for your family and pets. We customize our services to meet your specific needs, 
+              whether you need a one-time deep clean or regular maintenance.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Our Services
+            </h2>
+            <p className="text-xl text-gray-600">
+              Comprehensive cleaning solutions for every space
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+            {siteConfig.services.map((service, index) => (
+              <div key={index} className="text-center">
+                <Chip className="w-full justify-center text-sm">
+                  {service}
+                </Chip>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Additional Services */}
+      <section className="py-20 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Our Services
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Professional cleaning solutions tailored to your specific needs
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white border border-gray-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-4xl mb-4">🏠</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Residential Cleaning</h3>
+              <p className="text-gray-600 mb-4">
+                Complete home cleaning services for all living spaces. Regular maintenance and deep cleaning available.
+              </p>
+              <ul className="text-sm text-gray-500 space-y-1">
+                <li>• All rooms and living areas</li>
+                <li>• Kitchen and bathroom detail</li>
+                <li>• Vacuum and mop floors</li>
+                <li>• Dust all surfaces</li>
+              </ul>
+            </div>
+            
+            <div className="bg-gray-50 border border-gray-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-4xl mb-4">🏢</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Commercial Cleaning</h3>
+              <p className="text-gray-600 mb-4">
+                Professional office and business cleaning services. Flexible scheduling to fit your business hours.
+              </p>
+              <ul className="text-sm text-gray-500 space-y-1">
+                <li>• Office spaces and workstations</li>
+                <li>• Common areas and reception</li>
+                <li>• Post-construction cleanup</li>
+                <li>• Restroom sanitization</li>
+              </ul>
+            </div>
+            
+            <div className="bg-white border border-yellow-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow">
+              <div className="text-4xl mb-4">✨</div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-3">Deep Cleaning</h3>
+              <p className="text-gray-600 mb-4">
+                Comprehensive deep cleaning service for special occasions or annual maintenance.
+              </p>
+              <ul className="text-sm text-gray-500 space-y-1">
+                <li>• Window cleaning inside & out</li>
+                <li>• Appliance deep clean</li>
+                <li>• Furniture and upholstery</li>
+                <li>• Baseboards and trim</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+              Why Choose Elizabeth's Cleaning?
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              We're more than just a cleaning service - we're your trusted cleaning partner
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gray-100 border border-gray-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🛡️</span>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Fully Insured</h3>
+              <p className="text-gray-600 text-sm">
+                Licensed and fully insured for your complete peace of mind
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-yellow-50 border border-yellow-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🌱</span>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Eco-Friendly</h3>
+              <p className="text-gray-600 text-sm">
+                Safe, eco-friendly products that protect your family and environment
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-gray-100 border border-gray-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">⭐</span>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Experienced Team</h3>
+              <p className="text-gray-600 text-sm">
+                Years of experience with countless satisfied customers in our community
+              </p>
+            </div>
+            
+            <div className="text-center">
+              <div className="w-16 h-16 bg-yellow-50 border border-yellow-200 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">⏰</span>
+              </div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-2">Always On Time</h3>
+              <p className="text-gray-600 text-sm">
+                Punctual service that respects your schedule and time
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
