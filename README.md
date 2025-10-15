@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Elizabeth's Cleaning Service Website
 
 A modern, accessible, and high-performance multi-page website for Elizabeth's Cleaning Service built with Next.js 14, TypeScript, and Tailwind CSS.
@@ -261,3 +262,7 @@ For support or questions:
 ---
 
 **Built with ❤️ for Elizabeth's Cleaning Service**
+=======
+# cle-ser
+This proyect, is a web site fo
+>>>>>>> origin/main
