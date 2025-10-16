@@ -131,7 +131,7 @@ export default function ServicesPage() {
                 {
                   title: 'Windows',
                   description: 'Professional window cleaning',
-                  image: '/service/bano_4.jpeg',
+                  image: '/service/deep.jpeg',
                   bg: '#EEDBA5'
                 },
                 {
