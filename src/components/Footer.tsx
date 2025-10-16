@@ -38,7 +38,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="text-white" style={{ backgroundColor: '#1a1a1a' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
@@ -58,7 +58,7 @@ export default function Footer() {
               )}
             </Link>
             <p className="text-gray-300 mb-4">
-              We scrub, you relax — it's that simple.
+              Relax — we'll handle the cleaning.
             </p>
           </div>
 
@@ -100,7 +100,7 @@ export default function Footer() {
         </div>
 
         {/* Social Links & Copyright */}
-        <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-600 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="flex space-x-6 mb-4 md:mb-0">
             {socialLinks.map((social) => (
               <a

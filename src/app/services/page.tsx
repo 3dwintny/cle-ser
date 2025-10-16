@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Button from '@/components/Button';
 import { Card, CardHeader, CardBody } from '@/components/Card';
 import siteConfig from '../../../site.config.json';
@@ -40,15 +41,16 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-brand-500/20 to-accent-200/20">
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-500/10 to-accent-200/10"></div>
+      <section className="relative py-32" style={{ backgroundColor: '#EEDBA5' }}>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/5 to-transparent"></div>
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-ink-900 mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-6">
             Our Services
           </h1>
-          <p className="text-xl sm:text-2xl text-muted-200 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl sm:text-2xl text-gray-800 mb-8 max-w-3xl mx-auto">
             Professional cleaning services tailored to meet your specific needs
           </p>
+          <div className="w-24 h-1 bg-red-600 mx-auto"></div>
         </div>
       </section>
 
@@ -56,90 +58,135 @@ export default function ServicesPage() {
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-ink-900 mb-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
               Services Gallery
             </h2>
-            <p className="text-xl text-muted-200">
+            <p className="text-xl text-gray-700 mb-6">
               From residential to commercial spaces, we provide exceptional cleaning services
             </p>
+            <div className="w-24 h-1 bg-red-600 mx-auto"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {serviceDetails.slice(0, 4).map((service, index) => {
-              const serviceIcons = ['🏢', '👔', '🏠', '🚿'];
-              const serviceImages = [
-                { title: 'Office', icon: '🏢', bg: 'from-blue-500/20 to-blue-300/20' },
-                { title: 'Laundry', icon: '👔', bg: 'from-green-500/20 to-green-300/20' },
-                { title: 'House Cleaning', icon: '🏠', bg: 'from-purple-500/20 to-purple-300/20' },
-                { title: 'Bathroom', icon: '🚿', bg: 'from-orange-500/20 to-orange-300/20' }
-              ];
-              
-              const currentService = serviceImages[index] || serviceImages[0];
-              
-              return (
-                <Card key={index} className="h-full text-center">
-                  <CardHeader>
-                    <div className={`w-full h-48 bg-gradient-to-br ${currentService.bg} rounded-lg mb-4 flex items-center justify-center relative overflow-hidden`}>
-                      <span className="text-6xl z-10">{currentService.icon}</span>
-                      {/* Decorative elements */}
-                      <div className="absolute top-4 right-4 w-8 h-8 bg-white/20 rounded-full"></div>
-                      <div className="absolute bottom-4 left-4 w-6 h-6 bg-white/20 rounded-full"></div>
-                    </div>
-                    <h3 className="text-xl font-semibold text-ink-900">
-                      {currentService.title}
-                    </h3>
-                  </CardHeader>
-                  <CardBody>
-                    <p className="text-muted-200">
-                      {currentService.title === 'Office' ? 'Keep your workplace spotless and organized' :
-                       currentService.title === 'Laundry' ? 'Professional laundry cleaning and folding service' :
-                       currentService.title === 'House Cleaning' ? 'Professional house cleaning service' :
-                       'Professional bathroom cleaning service'}
-                    </p>
-                  </CardBody>
-                </Card>
-              );
-            })}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                title: 'Office',
+                description: 'Keep your workplace spotless and organized',
+                image: '/service/Oficina.jpeg',
+                bg: '#EEDBA5'
+              },
+              {
+                title: 'House Cleaning',
+                description: 'Professional house cleaning service',
+                image: '/service/casa.jpeg',
+                bg: '#EEDBA5'
+              },
+              {
+                title: 'Bathroom',
+                description: 'Professional bathroom cleaning service',
+                image: '/service/bano.jpeg',
+                bg: '#EEDBA5'
+              }
+            ].map((service, index) => (
+              <Card key={index} className="h-full text-center">
+                <CardHeader>
+                  <div className="w-full h-48 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden border-2 border-red-600/20" style={{ backgroundColor: service.bg }}>
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover rounded-lg"
+                    />
+                    {/* Decorative elements */}
+                    <div className="absolute top-4 right-4 w-8 h-8 bg-red-600/20 rounded-full"></div>
+                    <div className="absolute bottom-4 left-4 w-6 h-6 bg-black/10 rounded-full"></div>
+                  </div>
+                  <h3 className="text-xl font-semibold text-black">
+                    {service.title}
+                  </h3>
+                </CardHeader>
+                <CardBody>
+                  <p className="text-gray-700">
+                    {service.description}
+                  </p>
+                </CardBody>
+              </Card>
+            ))}
           </div>
 
           {/* Additional Services */}
           <div className="mt-16">
-            <h3 className="text-2xl font-bold text-ink-900 text-center mb-8">
+            <h3 className="text-2xl font-bold text-black text-center mb-4">
               Additional Specialized Services
             </h3>
+            <div className="w-24 h-1 bg-red-600 mx-auto mb-8"></div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {siteConfig.additionalServices.map((service, index) => (
-                <Card key={index} className="text-center">
+              {[
+                {
+                  title: 'Warehouse & Offices',
+                  description: 'Keep your workplace spotless and organized',
+                  image: '/service/almacen.jpeg',
+                  bg: '#EEDBA5'
+                },
+                {
+                  title: 'Windows',
+                  description: 'Professional window cleaning',
+                  image: '/service/bano_4.jpeg',
+                  bg: '#EEDBA5'
+                },
+                {
+                  title: 'Vacuuming',
+                  description: 'Deep vacuum service',
+                  image: '/service/aspirar.jpeg',
+                  bg: '#EEDBA5'
+                }
+              ].map((service, index) => (
+                <Card key={index} className="h-full text-center">
                   <CardHeader>
-                    <div className="w-full h-32 bg-gradient-to-br from-brand-500/20 to-accent-200/20 rounded-lg mb-4 flex items-center justify-center">
-                      <span className="text-3xl">🏢</span>
+                    <div className="w-full h-48 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden border-2 border-red-600/20" style={{ backgroundColor: service.bg }}>
+                      <Image
+                        src={service.image}
+                        alt={service.title}
+                        fill
+                        className="object-cover rounded-lg"
+                      />
+                      {/* Decorative elements */}
+                      <div className="absolute top-4 right-4 w-8 h-8 bg-red-600/20 rounded-full"></div>
+                      <div className="absolute bottom-4 left-4 w-6 h-6 bg-black/10 rounded-full"></div>
                     </div>
-                    <h4 className="text-lg font-semibold text-ink-900">
+                    <h3 className="text-xl font-semibold text-black">
                       {service.title}
-                    </h4>
+                    </h3>
                   </CardHeader>
                   <CardBody>
-                    <p className="text-muted-200">{service.subtitle}</p>
+                    <p className="text-gray-700">
+                      {service.description}
+                    </p>
                   </CardBody>
                 </Card>
               ))}
             </div>
           </div>
 
-          {/* CTA Section */}
-          <div className="mt-16 text-center">
-            <h3 className="text-2xl font-bold text-ink-900 mb-4">
-              Ready to Experience Exceptional Cleaning?
-            </h3>
-            <p className="text-muted-200 mb-8 max-w-2xl mx-auto">
-              Contact us today to discuss your cleaning needs and receive a customized quote
-              for our professional services.
-            </p>
-            <div className="flex justify-center">
-              <Link href="/contact">
-                <Button size="lg">Get a Quote</Button>
-              </Link>
-            </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20" style={{ backgroundColor: '#EEDBA5' }}>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-black mb-6">
+            Ready to Experience the Difference?
+          </h2>
+          <p className="text-xl text-gray-800 mb-8">
+            Join our satisfied clients and discover why Elizabeth's Cleaning Service
+            is the trusted choice for exceptional cleaning services.
+          </p>
+          <div className="flex justify-center">
+            <Link href="/contact">
+              <Button variant="outline" size="lg" className="bg-black text-white border-black hover:bg-gray-800">
+                Get Started Today
+              </Button>
+            </Link>
           </div>
         </div>
       </section>

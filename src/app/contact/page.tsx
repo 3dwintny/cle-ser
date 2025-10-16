@@ -135,15 +135,16 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-br from-brand-500/20 to-accent-200/20">
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-500/10 to-accent-200/10"></div>
+      <section className="relative py-32" style={{ backgroundColor: '#EEDBA5' }}>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/5 to-transparent"></div>
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-ink-900 mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-6">
             Contact Us
           </h1>
-          <p className="text-xl sm:text-2xl text-muted-200 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl sm:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto">
             We're here to make your life easier. Contact us today for a quote.
           </p>
+          <div className="w-24 h-1 bg-red-600 mx-auto"></div>
         </div>
       </section>
 
@@ -151,18 +152,23 @@ export default function ContactPage() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-ink-900 mb-4">
-              Contact Us
+            <h2 className="text-3xl font-bold text-black mb-4">
+              Get In Touch
             </h2>
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+              Ready to experience exceptional cleaning? Fill out the form below and we'll get back to you within 24 hours.
+            </p>
+            <div className="w-24 h-1 bg-red-600 mx-auto mt-4"></div>
           </div>
 
-          <Card className="max-w-2xl mx-auto">
-            <CardBody>
-              <form onSubmit={handleSubmit} className="space-y-6">
+          <Card className="max-w-3xl mx-auto shadow-2xl border-2 border-gray-100">
+            <CardBody className="p-8">
+              <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <Input
-                    label="Name"
+                    label="Full Name *"
                     type="text"
+                    placeholder="Full Name"
                     value={formData.name}
                     onChange={handleInputChange('name')}
                     error={errors.name}
@@ -170,8 +176,9 @@ export default function ContactPage() {
                   />
 
                   <Input
-                    label="Email Address"
+                    label="Email Address *"
                     type="email"
+                    placeholder="Email Address"
                     value={formData.email}
                     onChange={handleInputChange('email')}
                     error={errors.email}
@@ -182,17 +189,27 @@ export default function ContactPage() {
                 <Input
                   label="Phone Number"
                   type="tel"
+                  placeholder="Phone Number"
                   value={formData.phone}
                   onChange={handleInputChange('phone')}
                   error={errors.phone}
                 />
 
                 <Textarea
-                  label="Message"
+                  label="Message *"
+                  placeholder="Tell us about your cleaning needs... 
+
+Examples:
+• Regular house cleaning (weekly/bi-weekly)
+• One-time deep clean
+• Move-in/move-out cleaning
+• Office cleaning services
+• Special requests or concerns"
                   value={formData.message}
                   onChange={handleInputChange('message')}
                   error={errors.message}
-                  rows={5}
+                  rows={6}
+                  helperText="Please provide details about your cleaning requirements"
                   required
                 />
 
@@ -219,13 +236,29 @@ export default function ContactPage() {
                   </div>
                 )}
 
-                <div className="text-center">
+                <div className="text-center pt-4">
                   <Button
                     type="submit"
                     size="lg"
                     disabled={isSubmitting}
+                    className="bg-black hover:bg-gray-800 text-white border-2 border-black px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
                   >
-                    {isSubmitting ? 'Sending...' : 'Submit'}
+                    {isSubmitting ? (
+                      <span className="flex items-center">
+                        <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                        </svg>
+                        Sending...
+                      </span>
+                    ) : (
+                      <span className="flex items-center">
+                        <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                        </svg>
+                        Send Message
+                      </span>
+                    )}
                   </Button>
                 </div>
               </form>
@@ -233,6 +266,7 @@ export default function ContactPage() {
           </Card>
         </div>
       </section>
+
     </>
   );
 }
