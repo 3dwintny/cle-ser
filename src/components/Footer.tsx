@@ -117,7 +117,7 @@ export default function Footer() {
             ))}
           </div>
           <p className="text-gray-300 text-sm">
-            © {currentYear} Elizabeth's Cleaning Service. All rights reserved.
+            © {currentYear} Elizabeth&apos;s Cleaning Service. All rights reserved.
           </p>
         </div>
       </div>
