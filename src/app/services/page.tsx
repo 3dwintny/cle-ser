@@ -2,41 +2,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Button from '@/components/Button';
 import { Card, CardHeader, CardBody } from '@/components/Card';
-import siteConfig from '../../../site.config.json';
 
 export default function ServicesPage() {
-  const serviceDetails = [
-    {
-      title: 'Apartment Cleaning',
-      description: 'Complete cleaning services for apartments of all sizes, ensuring a spotless and comfortable living space.',
-      features: ['Deep cleaning', 'Kitchen sanitization', 'Bathroom cleaning', 'Floor care']
-    },
-    {
-      title: 'House Cleaning',
-      description: 'Comprehensive house cleaning services tailored to your home\'s specific needs and layout.',
-      features: ['All rooms cleaning', 'Interior windows', 'Carpet care', 'Appliance cleaning']
-    },
-    {
-      title: 'Maid Service',
-      description: 'Regular maid services to keep your home consistently clean and organized.',
-      features: ['Weekly/monthly service', 'Custom schedules', 'Quality guarantee', 'Flexible pricing']
-    },
-    {
-      title: 'Specialty Cleaning',
-      description: 'Expert cleaning for specific areas and challenging cleaning tasks.',
-      features: ['Move-in/move-out', 'Post-construction', 'Deep sanitization', 'Upholstery cleaning']
-    },
-    {
-      title: 'Move In/Out Cleaning',
-      description: 'Thorough cleaning services for transitions, ensuring your new space is move-in ready.',
-      features: ['Complete deep clean', 'Appliance cleaning', 'Window cleaning', 'Floor restoration']
-    },
-    {
-      title: 'Holiday Cleaning',
-      description: 'Specialized cleaning services for holiday preparations and post-holiday cleanup.',
-      features: ['Pre-holiday deep clean', 'Post-holiday cleanup', 'Decorative cleaning', 'Carpet refresh']
-    }
-  ];
 
   return (
     <>
@@ -178,7 +145,7 @@ export default function ServicesPage() {
             Ready to Experience the Difference?
           </h2>
           <p className="text-xl text-gray-800 mb-8">
-            Join our satisfied clients and discover why Elizabeth's Cleaning Service
+            Join our satisfied clients and discover why Elizabeth&apos;s Cleaning Service
             is the trusted choice for exceptional cleaning services.
           </p>
           <div className="flex justify-center">

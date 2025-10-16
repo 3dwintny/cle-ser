@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Button from '@/components/Button';
-import { Card, CardHeader, CardBody } from '@/components/Card';
-import siteConfig from '../../../site.config.json';
+import { Card, CardHeader } from '@/components/Card';
 
 export default function AboutPage() {
   const ourStory = `Elizabeth's Cleaning Service was born from a simple yet powerful vision: to transform homes and workplaces into spaces that inspire joy and productivity. Founded by Elizabeth Carter, our journey began with a single mission - to provide cleaning services that go beyond the surface, creating environments that truly reflect the lives and aspirations of our clients.
@@ -175,7 +174,7 @@ Building lasting relationships requires honesty, reliability, and clear communic
             Ready to Experience the Difference?
           </h2>
           <p className="text-xl text-gray-800 mb-8">
-            Join our satisfied clients and discover why Elizabeth's Cleaning Service
+            Join our satisfied clients and discover why Elizabeth&apos;s Cleaning Service
             is the trusted choice for exceptional cleaning services.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

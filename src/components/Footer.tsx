@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import Image from 'next/image';
 
 const socialLinks = [
   {
@@ -45,20 +46,22 @@ export default function Footer() {
           <div>
             <Link href="/" className="inline-block mb-4">
               {!logoError ? (
-                <img
+                <Image
                   src="/LOGOS/ELIZABETHS_CLEANING_SERVICE_ORIGINAL_(%20EN%20BLANCO%20).png"
                   alt="Elizabeth's Cleaning Service"
+                  width={288}
+                  height={72}
                   className="h-14 w-auto sm:h-18 max-w-72"
                   onError={() => setLogoError(true)}
                 />
               ) : (
                 <span className="text-xl font-bold text-blue-500">
-                  Elizabeth's Cleaning
+                  Elizabeth&apos;s Cleaning
                 </span>
               )}
             </Link>
             <p className="text-gray-300 mb-4">
-              Relax — we'll handle the cleaning.
+              Relax — we&apos;ll handle the cleaning.
             </p>
           </div>
 

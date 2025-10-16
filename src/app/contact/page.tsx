@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Button from '@/components/Button';
 import { Input, Textarea } from '@/components/FormControls';
-import { Card, CardHeader, CardBody } from '@/components/Card';
+import { Card, CardBody } from '@/components/Card';
 
 interface FormData {
   name: string;
@@ -142,7 +142,7 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="text-xl sm:text-2xl text-gray-700 mb-8 max-w-3xl mx-auto">
-            We're here to make your life easier. Contact us today for a quote.
+            We&apos;re here to make your life easier. Contact us today for a quote.
           </p>
           <div className="w-24 h-1 bg-red-600 mx-auto"></div>
         </div>
@@ -156,7 +156,7 @@ export default function ContactPage() {
               Get In Touch
             </h2>
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              Ready to experience exceptional cleaning? Fill out the form below and we'll get back to you within 24 hours.
+              Ready to experience exceptional cleaning? Fill out the form below and we&apos;ll get back to you within 24 hours.
             </p>
             <div className="w-24 h-1 bg-red-600 mx-auto mt-4"></div>
           </div>
@@ -220,7 +220,7 @@ Examples:
                       <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                       </svg>
-                      <span className="text-green-800">Message sent successfully! We'll get back to you soon.</span>
+                      <span className="text-green-800">Message sent successfully! We&apos;ll get back to you soon.</span>
                     </div>
                   </div>
                 )}

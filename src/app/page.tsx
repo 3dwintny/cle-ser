@@ -3,10 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Button from '@/components/Button';
-import Chip from '@/components/Chip';
-import { Card, CardHeader, CardBody } from '@/components/Card';
 import PhotoSlider from '@/components/PhotoSlider';
-import siteConfig from '../../site.config.json';
 
 export default function Home() {
   return (
@@ -31,7 +28,7 @@ export default function Home() {
             {/* Left Column - Content */}
             <div className="text-center lg:text-left">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-6">
-                {siteConfig.brand}
+                Elizabeth&apos;s Cleaning Service
               </h1>
               <p className="text-xl sm:text-2xl text-gray-800 mb-6">
                 Professional Home & Office Cleaning Services
@@ -77,7 +74,7 @@ export default function Home() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <p className="text-2xl sm:text-3xl font-medium text-black">
-            {siteConfig.brand} — Relax — we'll handle the cleaning.
+            Elizabeth&apos;s Cleaning Service — Relax — we&apos;ll handle the cleaning.
           </p>
           <div className="w-24 h-1 bg-red-600 mx-auto mt-4"></div>
         </div>
@@ -190,10 +187,10 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Elizabeth's Cleaning?
+              Why Choose Elizabeth&apos;s Cleaning?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              We're more than just a cleaning service - we're your trusted cleaning partner
+              We&apos;re more than just a cleaning service - we&apos;re your trusted cleaning partner
             </p>
           </div>
           

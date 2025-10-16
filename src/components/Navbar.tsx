@@ -44,9 +44,11 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               {!logoError ? (
-                <img
+                <Image
                   src="/LOGOS/ELIZABETHS_CLEANING_SERVICE_ORIGINAL_(SIN_NINGUN_TIPO_DE_FONDO).png"
                   alt="Elizabeth's Cleaning Service"
+                  width={96}
+                  height={96}
                   className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 object-contain"
                   onError={() => {
                     console.error('Logo failed to load, using text fallback');
@@ -60,7 +62,7 @@ export default function Navbar() {
                     ? 'text-black hover:opacity-80' 
                     : 'text-black hover:opacity-80'
                 )}>
-                  Elizabeth's Cleaning
+                  Elizabeth&apos;s Cleaning
                 </span>
               )}
             </Link>
