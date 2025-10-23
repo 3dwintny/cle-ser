@@ -24,7 +24,7 @@ export default function Home() {
             {/* Main Content */}
             <div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-6">
-                Elizabeth&apos;s Cleaning Service
+                Elizabeth&apos;s Cleaning Services, LLC
               </h1>
               <p className="text-xl sm:text-2xl text-black/90 mb-6">
                 Professional Home & Office Cleaning Services
@@ -63,149 +63,233 @@ export default function Home() {
             </div>
       </section>
 
-      {/* Tagline Section */}
-      <section className="py-16 bg-white">
+      {/* Main Content Section */}
+      <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <p className="text-2xl sm:text-3xl font-medium text-black">
-            Elizabeth&apos;s Cleaning Service — Relax — we&apos;ll handle the cleaning.
+            Elizabeth&apos;s Cleaning Services, LLC — Relax — we&apos;ll handle the cleaning.
           </p>
-          <div className="w-24 h-1 bg-red-600 mx-auto mt-4"></div>
+          <div className="w-24 h-1 bg-red-600 mx-auto mt-4 mb-12"></div>
+          
+          <h2 className="text-3xl sm:text-4xl font-bold text-black mb-6">
+            Scrubbed spotless outshines the rest!
+          </h2>
+          <h3 className="text-2xl sm:text-3xl font-bold text-black mb-6">
+            Our professional staff cares for your home as if it was our own.
+          </h3>
+          <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+            We understand that a clean and healthy environment is essential for your well-being and productivity. 
+            Our team uses eco-friendly products and advanced cleaning techniques to ensure your space is not only 
+            spotless but also safe for your family and pets. We customize our services to meet your specific needs, 
+            whether you need a one-time deep clean or regular maintenance.
+          </p>
         </div>
       </section>
 
-      {/* Value Proposition */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
-              Scrubbed spotless outshines the rest!
-            </h2>
-            <h3 className="text-2xl sm:text-3xl font-bold text-black mb-6">
-              Our professional staff cares for your home as if it was our own.
-            </h3>
-            <p className="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
-              We understand that a clean and healthy environment is essential for your well-being and productivity. 
-              Our team uses eco-friendly products and advanced cleaning techniques to ensure your space is not only 
-              spotless but also safe for your family and pets. We customize our services to meet your specific needs, 
-              whether you need a one-time deep clean or regular maintenance.
-            </p>
-            <div className="w-24 h-1 bg-red-600 mx-auto mt-6"></div>
-          </div>
-        </div>
-      </section>
+      {/* Our Services */}
+      <section className="py-24 bg-elizabeth-gradient-diagonal">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-
-      {/* Additional Services */}
-      <section className="py-20 bg-elizabeth-gradient-diagonal">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
+          {/* Services Header */}
+          <div className="text-center mb-20">
+            <div className="inline-block">
+              <div className="w-16 h-0.5 bg-elizabeth-gold mb-4"></div>
+              <p className="text-sm font-medium text-elizabeth-gold tracking-wider uppercase">LOS ANGELES, CA</p>
+            </div>
+            <h2 className="text-4xl sm:text-5xl font-bold text-black mt-6 mb-6">
               Our Services
             </h2>
-            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              Professional cleaning solutions tailored to your specific needs
+            <p className="text-xl text-black/80 max-w-3xl mx-auto leading-relaxed">
+              Professional cleaning solutions tailored to your specific needs. 
+              We provide comprehensive services that go beyond regular cleaning to make your space truly exceptional.
             </p>
-            <div className="w-24 h-1 bg-red-600 mx-auto mt-4"></div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white border-2 border-gray-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow hover:border-red-600">
-              <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
+          {/* Services Grid - Premium Cards */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            
+            {/* Residential Cleaning */}
+            <div className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group">
+              <div className="relative h-80 overflow-hidden">
                 <Image
                   src="/Home/sala.jpeg"
                   alt="Beautiful residential living space"
                   fill
-                  className="object-cover"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                   unoptimized
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
-              <h3 className="text-xl font-semibold text-black mb-3">Residential Cleaning</h3>
-              <p className="text-gray-700 mb-4">
-                Complete home cleaning services for all living spaces. Regular maintenance and deep cleaning available.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• All rooms and living areas</li>
-                <li>• Kitchen and bathroom detail</li>
-                <li>• Vacuum and mop floors</li>
-                <li>• Dust all surfaces</li>
-              </ul>
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-black mb-4">Residential Cleaning</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  Complete home cleaning services for all living spaces. Regular maintenance and deep cleaning available to keep your home spotless and comfortable.
+                </p>
+                <ul className="text-gray-700 space-y-2 mb-8">
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
+                    All rooms and living areas
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
+                    Kitchen and bathroom detail
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
+                    Vacuum and mop floors
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
+                    Dust all surfaces
+                  </li>
+                </ul>
+                <Link href="/contact">
+                  <Button className="w-full bg-black hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+                    Get Quote
+                  </Button>
+                </Link>
+              </div>
             </div>
-            
-            <div className="bg-white border-2 border-gray-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow hover:border-red-600">
-              <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
+
+            {/* Commercial Cleaning */}
+            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group">
+              <div className="relative h-80 overflow-hidden">
                 <Image
                   src="/Home/ofcie_services.jpg"
                   alt="Professional office cleaning services"
                   fill
-                  className="object-cover"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                   unoptimized
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
-              <h3 className="text-xl font-semibold text-black mb-3">Commercial Cleaning</h3>
-              <p className="text-gray-700 mb-4">
-                Professional office and business cleaning services. Flexible scheduling to fit your business hours.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Office spaces and workstations</li>
-                <li>• Common areas and reception</li>
-                <li>• Post-construction cleanup</li>
-                <li>• Restroom sanitization</li>
-              </ul>
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-black mb-4">Commercial Cleaning</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  Professional office and business cleaning services. Flexible scheduling to fit your business hours and maintain a pristine work environment.
+                </p>
+                <ul className="text-gray-700 space-y-2 mb-8">
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
+                    Office spaces and workstations
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
+                    Common areas and reception
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
+                    Post-construction cleanup
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
+                    Restroom sanitization
+                  </li>
+                </ul>
+                <Link href="/contact">
+                  <Button className="w-full bg-black hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+                    Get Quote
+                  </Button>
+                </Link>
+              </div>
             </div>
-            
-            <div className="bg-white border-2 border-gray-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow hover:border-red-600">
-              <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
+
+            {/* Deep Cleaning */}
+            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group">
+              <div className="relative h-80 overflow-hidden">
                 <Image
                   src="/Home/deep_clean.jpeg"
                   alt="Professional deep cleaning service"
                   fill
-                  className="object-cover"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                   unoptimized
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
-              <h3 className="text-xl font-semibold text-black mb-3">Deep Cleaning</h3>
-              <p className="text-gray-700 mb-4">
-                Comprehensive deep cleaning service for special occasions or annual maintenance.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Window cleaning inside & out</li>
-                <li>• Appliance deep clean</li>
-                <li>• Furniture and upholstery</li>
-                <li>• Baseboards and trim</li>
-              </ul>
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-black mb-4">Deep Cleaning</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  Comprehensive deep cleaning service for special occasions or annual maintenance. We go beyond surface cleaning to restore your space to its original beauty.
+                </p>
+                <ul className="text-gray-700 space-y-2 mb-8">
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
+                    Window cleaning inside & out
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
+                    Appliance deep clean
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
+                    Furniture and upholstery
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
+                    Baseboards and trim
+                  </li>
+                </ul>
+                <Link href="/contact">
+                  <Button className="w-full bg-black hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+                    Get Quote
+                  </Button>
+                </Link>
+              </div>
             </div>
 
-            <div className="bg-white border-2 border-gray-200 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow hover:border-red-600">
-              <div className="relative w-full h-48 mb-4 rounded-lg overflow-hidden">
+            {/* Baseboards & Floor Care */}
+            <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group">
+              <div className="relative h-80 overflow-hidden">
                 <Image
                   src="/service/almacen.jpeg"
                   alt="Professional baseboards and door frames cleaning"
                   fill
-                  className="object-cover"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                   unoptimized
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
-              <h3 className="text-xl font-semibold text-black mb-3">Baseboards & Carpet Cleaning</h3>
-              <p className="text-gray-700 mb-4">
-                Specialized cleaning service for baseboards, door frames, carpet cleaning, and floor polishing. Stone, marble, and general floor maintenance.
-              </p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Baseboards cleaning and dusting</li>
-                <li>• Door frames and trim detail</li>
-                <li>• Carpet cleaning and maintenance</li>
-                <li>• Stone and marble floor polishing</li>
-              </ul>
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-black mb-4">Baseboards & Floor Care</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  Specialized cleaning for baseboards, door frames, carpet cleaning, and professional floor care including stone, marble polishing, and buffing.
+                </p>
+                <ul className="text-gray-700 space-y-2 mb-8">
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
+                    Baseboards and door frames cleaning
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
+                    Carpet deep cleaning
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
+                    Stone and marble floor polishing
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
+                    Floor buffing and shine restoration
+                  </li>
+                </ul>
+                <Link href="/contact">
+                  <Button className="w-full bg-black hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
+                    Get Quote
+                  </Button>
+                </Link>
+              </div>
             </div>
+
           </div>
         </div>
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose Elizabeth&apos;s Cleaning?
+            <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
+              Why Choose Elizabeth&apos;s Cleaning Services, LLC?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               We&apos;re more than just a cleaning service - we&apos;re your trusted cleaning partner

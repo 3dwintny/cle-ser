@@ -46,7 +46,7 @@ export default function Navbar() {
               {!logoError ? (
                 <Image
                   src="/LOGOS/logo-sin-fondo.png"
-                  alt="Elizabeth's Cleaning Service"
+                  alt="Elizabeth's Cleaning Services, LLC"
                   width={120}
                   height={120}
                   className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 object-contain"
