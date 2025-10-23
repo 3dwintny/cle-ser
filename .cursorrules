@@ -1,0 +1,94 @@
+# Elizabeth's Cleaning Service - Reglas del Proyecto
+
+## 🎨 PALETA DE COLORES DE MARCA
+- **COLORES PRINCIPALES:** Solo usar degradado dorado, blanco y negro
+- **Degradado dorado:** `bg-elizabeth-gradient-diagonal` (CSS variable definida en globals.css)
+- **Dorado sólido:** `bg-elizabeth-gold` (CSS variable)
+- **PROHIBIDO:** Azul, verde, rojo, gris - solo usar colores de marca
+- **Texto:** Preferir `text-black` sobre fondos claros para mejor contraste
+
+## 🎯 PATRÓN DE SECCIONES
+- **SIEMPRE intercalar colores** entre secciones:
+  - Sección 1: `bg-elizabeth-gradient-diagonal` (dorado)
+  - Sección 2: `bg-white` (blanco)
+  - Sección 3: `bg-elizabeth-gradient-diagonal` (dorado)
+  - Sección 4: `bg-white` (blanco)
+  - Y así sucesivamente...
+
+## 🖼️ IMÁGENES
+- **SIEMPRE agregar `unoptimized`** a todos los componentes Image de Next.js
+- **Problema conocido:** Next.js image optimizer no funciona bien con estas imágenes
+- **Rutas de imágenes:**
+  - Logos: `/LOGOS/logo-sin-fondo.png`, `/LOGOS/logo-en-blanco.png`
+  - Home: `/Home/sala.jpeg`, `/Home/cocina.jpeg`, etc.
+  - About: `/About/Elizabet.png`, `/About/Fernando.png`, `/About/Maria.png`, `/About/ahca_certificate.jpeg`
+  - Services: `/service/Oficina.jpeg`, `/service/habitacon3.jpeg`, `/service/bano_4.jpeg`
+
+## 📱 RESPONSIVE DESIGN
+- **Padding top:** Usar `pt-36 sm:pt-28 md:pt-24 lg:pt-0` para evitar colisión con navbar
+- **Mobile first:** Siempre considerar experiencia móvil
+- **"Menos es más":** Simplificar contenido en móvil
+
+## 🏆 CERTIFICACIONES Y CREDENCIALES
+- **AHCA Certificate:** Mostrar en sección "Professional Credentials"
+- **Información clave:** Nancy Elizabeth Torres, certificada Mayo 2023
+- **Enfoque:** Menos texto, certificado más grande y prominente
+- **Sello dorado:** Resaltar elemento dorado del certificado
+
+## 🗺️ MAPA Y CONTACTO
+- **Ubicación:** 9602 Danville St, Pico Rivera, CA 90660
+- **Teléfono:** +1 (562) 639-2990
+- **Mapa:** Usar embed de Google Maps con ubicación exacta
+- **Sin tarjetas extra:** Solo mostrar el mapa, sin información adicional
+
+## 🎨 GRADIENTES DISPONIBLES
+- `bg-elizabeth-gradient-diagonal` - Para elementos principales
+- `bg-elizabeth-gradient-vertical` - Para elementos secundarios
+- `bg-elizabeth-gradient-main` - Para elementos horizontales
+
+## 📝 NAVBAR
+- **Logo:** `/LOGOS/logo-sin-fondo.png`
+- **Gradiente activo:** `bg-elizabeth-gradient-diagonal` cuando está activo y scrolled
+- **Botones:** Home, Services, About, Contact - todos con mismo comportamiento
+
+## 🦶 FOOTER
+- **Logo:** `/LOGOS/logo-en-blanco.png`
+- **Redes sociales:** WhatsApp, TikTok, Instagram, Facebook
+- **WhatsApp:** Solo en footer, no en Home page
+- **URLs de redes sociales:**
+  - WhatsApp: `https://api.whatsapp.com/send?phone=15626392990&text=Hello!%20I%27m%20interested%20in%20your%20cleaning%20services.`
+  - TikTok: `https://www.tiktok.com/@elizabethcleaningllc?_t=ZP-90fNQLdHu3z&_r=1`
+  - Instagram: `https://www.instagram.com/elizabeth__cleaning?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr`
+  - Facebook: `https://www.facebook.com/profile.php?id=100083328251594&mibextid=wwXIfr&mibextid=wwXIfr`
+
+## 🔧 COMPONENTES ESPECIALES
+- **PhotoSlider:** Fondo completo con overlay oscuro `bg-black/60`
+- **Overlay:** Usar `bg-black/60` para mejor contraste de texto
+- **Botones:** Negro para "Call Now", rojo outline para "Get Quote"
+
+## 🚫 NO HACER
+- No usar colores fuera de la paleta (azul, verde, rojo, gris)
+- No duplicar colores consecutivos en secciones
+- No olvidar `unoptimized` en imágenes
+- No crear contenido muy extenso para móvil
+- No usar WhatsApp button en Home page
+
+## ✅ SIEMPRE HACER
+- Verificar patrón intercalado de colores
+- Agregar `unoptimized` a todas las imágenes
+- Usar solo colores de marca
+- Considerar experiencia móvil
+- Mantener consistencia visual
+
+## 📁 ESTRUCTURA DE ARCHIVOS IMPORTANTES
+- `src/app/page.tsx` - Home page
+- `src/app/about/page.tsx` - About page
+- `src/app/services/page.tsx` - Services page
+- `src/app/contact/page.tsx` - Contact page
+- `src/components/PhotoSlider.tsx` - Background slider
+- `src/components/Navbar.tsx` - Navigation
+- `src/components/Footer.tsx` - Footer
+- `src/app/globals.css` - Estilos globales y variables CSS
+
+## 🎯 OBJETIVO
+Crear una experiencia web profesional, limpia y consistente que refleje la calidad y profesionalismo de Elizabeth's Cleaning Service, manteniendo siempre los colores de marca y la mejor experiencia de usuario posible.

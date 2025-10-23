@@ -1,9 +1,72 @@
 @import "tailwindcss";
 
+:root {
+  /* Elizabeth's Cleaning Service Brand Colors */
+  --elizabeth-gold: #ffc600;
+  --elizabeth-gold-light: #ffd800;
+  --elizabeth-gold-dark: #e6ac00;
+  
+  /* Gradientes Dorados como en las imágenes */
+  --elizabeth-gradient-1: linear-gradient(90deg, #AE8625 0%, #F7EF8A 25%, #D2AC47 75%, #EDC967 100%);
+  --elizabeth-gradient-2: linear-gradient(90deg, #DFBD69 0%, #926F34 100%);
+  --elizabeth-gradient-3: linear-gradient(90deg, #F9F295 0%, #E0AA3E 25%, #FAF398 75%, #B88A44 100%);
+  
+  /* Gradiente principal recomendado */
+  --elizabeth-gradient-main: linear-gradient(90deg, #AE8625 0%, #F7EF8A 25%, #D2AC47 75%, #EDC967 100%);
+}
+
 body {
   background: #F7FAFC;
   color: #0D171C;
   font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Elizabeth's Brand Color Utilities */
+.bg-elizabeth-gold {
+  background-color: var(--elizabeth-gold) !important;
+}
+
+.bg-elizabeth-gold-light {
+  background-color: var(--elizabeth-gold-light) !important;
+}
+
+.bg-elizabeth-gold-dark {
+  background-color: var(--elizabeth-gold-dark) !important;
+}
+
+.text-elizabeth-gold {
+  color: var(--elizabeth-gold) !important;
+}
+
+.border-elizabeth-gold {
+  border-color: var(--elizabeth-gold) !important;
+}
+
+/* Elizabeth's Gradient Utilities */
+.bg-elizabeth-gradient-main {
+  background: var(--elizabeth-gradient-main) !important;
+}
+
+.bg-elizabeth-gradient-1 {
+  background: var(--elizabeth-gradient-1) !important;
+}
+
+.bg-elizabeth-gradient-2 {
+  background: var(--elizabeth-gradient-2) !important;
+}
+
+.bg-elizabeth-gradient-3 {
+  background: var(--elizabeth-gradient-3) !important;
+}
+
+/* Gradiente vertical (para hero sections) */
+.bg-elizabeth-gradient-vertical {
+  background: linear-gradient(180deg, #AE8625 0%, #F7EF8A 25%, #D2AC47 75%, #EDC967 100%) !important;
+}
+
+/* Gradiente diagonal (para elementos especiales) */
+.bg-elizabeth-gradient-diagonal {
+  background: linear-gradient(135deg, #AE8625 0%, #F7EF8A 25%, #D2AC47 75%, #EDC967 100%) !important;
 }
 
 /* Specific component styles as per Color-Guard Addendum */

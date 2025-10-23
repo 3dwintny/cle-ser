@@ -8,7 +8,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-32" style={{ backgroundColor: '#EEDBA5' }}>
+      <section className="relative py-32 bg-elizabeth-gradient-diagonal">
         <div className="absolute inset-0 bg-gradient-to-r from-black/5 to-transparent"></div>
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-6">
@@ -40,19 +40,19 @@ export default function ServicesPage() {
                 title: 'Office',
                 description: 'Keep your workplace spotless and organized',
                 image: '/service/Oficina.jpeg',
-                bg: '#EEDBA5'
+                bg: 'var(--elizabeth-gradient-diagonal)'
               },
               {
                 title: 'House Cleaning',
                 description: 'Professional house cleaning service',
-                image: '/service/casa.jpeg',
-                bg: '#EEDBA5'
+                image: '/service/habitacon3.jpeg',
+                bg: 'var(--elizabeth-gradient-diagonal)'
               },
               {
                 title: 'Bathroom',
                 description: 'Professional bathroom cleaning service',
-                image: '/service/bano.jpeg',
-                bg: '#EEDBA5'
+                image: '/service/bano_4.jpeg',
+                bg: 'var(--elizabeth-gradient-diagonal)'
               }
             ].map((service, index) => (
               <Card key={index} className="h-full text-center">
@@ -63,6 +63,7 @@ export default function ServicesPage() {
                       alt={service.title}
                       fill
                       className="object-cover rounded-lg"
+                      unoptimized
                     />
                     {/* Decorative elements */}
                     <div className="absolute top-4 right-4 w-8 h-8 bg-red-600/20 rounded-full"></div>
@@ -93,19 +94,19 @@ export default function ServicesPage() {
                   title: 'Warehouse & Offices',
                   description: 'Keep your workplace spotless and organized',
                   image: '/service/almacen.jpeg',
-                  bg: '#EEDBA5'
+                  bg: 'var(--elizabeth-gradient-diagonal)'
                 },
                 {
                   title: 'Windows',
                   description: 'Professional window cleaning',
                   image: '/service/deep.jpeg',
-                  bg: '#EEDBA5'
+                  bg: 'var(--elizabeth-gradient-diagonal)'
                 },
                 {
                   title: 'Vacuuming',
                   description: 'Deep vacuum service',
                   image: '/service/aspirar.jpeg',
-                  bg: '#EEDBA5'
+                  bg: 'var(--elizabeth-gradient-diagonal)'
                 }
               ].map((service, index) => (
                 <Card key={index} className="h-full text-center">
@@ -116,6 +117,7 @@ export default function ServicesPage() {
                         alt={service.title}
                         fill
                         className="object-cover rounded-lg"
+                        unoptimized
                       />
                       {/* Decorative elements */}
                       <div className="absolute top-4 right-4 w-8 h-8 bg-red-600/20 rounded-full"></div>
@@ -139,7 +141,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20" style={{ backgroundColor: '#EEDBA5' }}>
+      <section className="py-20 bg-elizabeth-gradient-diagonal">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-black mb-6">
             Ready to Experience the Difference?

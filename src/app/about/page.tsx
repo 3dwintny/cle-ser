@@ -25,7 +25,7 @@ Building lasting relationships requires honesty, reliability, and clear communic
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-32" style={{ backgroundColor: '#EEDBA5' }}>
+      <section className="relative py-32 bg-elizabeth-gradient-diagonal">
         <div className="absolute inset-0 bg-gradient-to-r from-black/5 to-transparent"></div>
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -38,6 +38,7 @@ Building lasting relationships requires honesty, reliability, and clear communic
                   fill
                   className="object-cover"
                   priority
+                  unoptimized
                 />
                 {/* Elegant overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-br from-black/10 via-transparent to-black/5"></div>
@@ -86,7 +87,7 @@ Building lasting relationships requires honesty, reliability, and clear communic
       </section>
 
       {/* Our Mission Section */}
-      <section className="py-20" style={{ backgroundColor: '#EEDBA5' }}>
+      <section className="py-20 bg-elizabeth-gradient-diagonal">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
@@ -95,7 +96,7 @@ Building lasting relationships requires honesty, reliability, and clear communic
             <div className="w-24 h-1 bg-red-600 mx-auto"></div>
           </div>
 
-          <div className="prose prose-lg max-w-4xl mx-auto text-gray-700 font-noto">
+          <div className="prose prose-lg max-w-4xl mx-auto text-black font-noto">
             {ourMission.split('\n\n').map((paragraph, index) => (
               <p key={index} className="mb-6 leading-relaxed text-justify text-lg lg:text-xl">
                 {paragraph}
@@ -105,8 +106,64 @@ Building lasting relationships requires honesty, reliability, and clear communic
         </div>
       </section>
 
-      {/* Our Team Section */}
+      {/* Professional Credentials Section */}
       <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
+              Professional Credentials
+            </h2>
+            <p className="text-xl text-black max-w-3xl mx-auto">
+              Certified by industry-leading organizations to ensure the highest standards of cleaning excellence
+            </p>
+            <div className="w-24 h-1 bg-black mx-auto mt-4"></div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            {/* Certificate Display - Made Larger */}
+            <div className="order-2 lg:order-1">
+              <div className="relative bg-white rounded-2xl shadow-2xl p-8 border-4 border-black hover:border-elizabeth-gold transition-all duration-300">
+                <div className="aspect-[3/2] relative rounded-xl overflow-hidden">
+                  <Image
+                    src="/About/ahca_certificate.jpeg"
+                    alt="American House Cleaners Association Certificate of Completion"
+                    fill
+                    className="object-contain"
+                    unoptimized
+                  />
+                </div>
+                {/* Certificate Badge - Using Brand Colors */}
+                <div className="absolute -top-6 -right-6 w-20 h-20 bg-elizabeth-gradient-diagonal rounded-full flex items-center justify-center shadow-lg border-4 border-white">
+                  <svg className="w-10 h-10 text-black" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L13.09 8.26L19 7L14.74 12L19 17L13.09 15.74L12 22L10.91 15.74L5 17L9.26 12L5 7L10.91 8.26L12 2Z"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            {/* Credentials Content - Simplified */}
+            <div className="order-1 lg:order-2">
+              <div className="bg-white rounded-xl p-8 shadow-lg border-l-4 border-elizabeth-gold">
+                <h3 className="text-2xl font-bold text-black mb-4">
+                  AHCA Certified Professional
+                </h3>
+                <p className="text-black mb-4">
+                  Nancy Elizabeth Torres has successfully completed the American House Cleaners Association Certification Course, demonstrating expertise in professional cleaning standards and health-focused cleaning practices.
+                </p>
+                <div className="flex items-center text-sm text-black">
+                  <svg className="w-4 h-4 mr-2 text-black" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  </svg>
+                  Certified: May 2023
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Team Section */}
+      <section className="py-20 bg-elizabeth-gradient-diagonal">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
@@ -151,6 +208,7 @@ Building lasting relationships requires honesty, reliability, and clear communic
                       width={128}
                       height={128}
                       className="w-full h-full object-cover rounded-full"
+                      unoptimized
                     />
                     {/* Decorative elements */}
                     <div className="absolute top-2 right-2 w-6 h-6 bg-white/20 rounded-full"></div>
@@ -168,7 +226,7 @@ Building lasting relationships requires honesty, reliability, and clear communic
       </section>
 
       {/* CTA Section */}
-      <section className="py-20" style={{ backgroundColor: '#EEDBA5' }}>
+      <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-black mb-6">
             Ready to Experience the Difference?

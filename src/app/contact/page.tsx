@@ -135,7 +135,7 @@ export default function ContactPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-32" style={{ backgroundColor: '#EEDBA5' }}>
+      <section className="relative py-32 bg-elizabeth-gradient-diagonal">
         <div className="absolute inset-0 bg-gradient-to-r from-black/5 to-transparent"></div>
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-6">
@@ -264,6 +264,40 @@ Examples:
               </form>
             </CardBody>
           </Card>
+        </div>
+      </section>
+
+      {/* Contact Information & Map Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-black mb-4">
+              Our Location
+            </h2>
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+              Find us at our location in Pico Rivera
+            </p>
+            <div className="w-24 h-1 bg-red-600 mx-auto mt-4"></div>
+          </div>
+
+          {/* Google Maps */}
+          <div className="max-w-4xl mx-auto">
+            <Card className="shadow-lg border-2 border-gray-100">
+              <CardBody className="p-0">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3304.7594837766826!2d-118.0678439!3d34.0151113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c1a8ccb5ba6cb43%3A0xfa6e5fdec5fc3c61!2s9602%20Danville%20St%2C%20Pico%20Rivera%2C%20CA%2090660%2C%20United%20States!5e0!3m2!1sen!2sus!4v1729635000000!5m2!1sen!2sus"
+                  width="100%"
+                  height="500"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="rounded-lg"
+                  title="Elizabeth's Cleaning Service Location"
+                ></iframe>
+              </CardBody>
+            </Card>
+          </div>
         </div>
       </section>
 

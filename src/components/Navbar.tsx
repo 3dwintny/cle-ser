@@ -45,13 +45,15 @@ export default function Navbar() {
             <Link href="/" className="flex items-center">
               {!logoError ? (
                 <Image
-                  src="/LOGOS/ELIZABETHS_CLEANING_SERVICE_ORIGINAL_(SIN_NINGUN_TIPO_DE_FONDO).png"
+                  src="/LOGOS/logo-sin-fondo.png"
                   alt="Elizabeth's Cleaning Service"
-                  width={96}
-                  height={96}
+                  width={120}
+                  height={120}
                   className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 object-contain"
+                  priority
+                  unoptimized
                   onError={() => {
-                    console.error('Logo failed to load, using text fallback');
+                    console.error('Navbar logo failed to load, using text fallback');
                     setLogoError(true);
                   }}
                 />
@@ -79,13 +81,12 @@ export default function Navbar() {
                     'px-3 py-2 rounded-md text-sm font-medium transition-colors',
                     pathname === item.href
                       ? isScrolled
-                        ? 'text-black border-b-2 border-black shadow-sm'
+                        ? 'text-black border-b-2 border-black shadow-sm bg-elizabeth-gradient-diagonal'
                         : 'text-black bg-white border-b-2 border-black shadow-sm'
                       : isScrolled
                         ? 'text-black hover:opacity-80 hover:bg-white/50'
                         : 'text-black hover:opacity-80 hover:bg-white/50'
                   )}
-                  style={pathname === item.href && isScrolled ? { backgroundColor: '#EEDBA5' } : {}}
                 >
                   {item.name}
                 </Link>
@@ -167,11 +168,10 @@ export default function Navbar() {
                   'block px-3 py-2 rounded-md text-base font-medium',
                   pathname === item.href
                     ? isScrolled
-                      ? 'text-black border-l-4 border-black'
+                      ? 'text-black border-l-4 border-black bg-elizabeth-gradient-diagonal'
                       : 'text-black bg-white border-l-4 border-black'
                     : 'text-black hover:opacity-80 hover:bg-gray-50'
                 )}
-                style={pathname === item.href && isScrolled ? { backgroundColor: '#EEDBA5' } : {}}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {item.name}

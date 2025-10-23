@@ -29,52 +29,49 @@ const PhotoSlider = () => {
   };
 
   return (
-    <div className="w-full max-w-md">
-      <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
-        {/* Photo Display */}
-        <div className="aspect-square relative overflow-hidden">
-          <Image
-            src={homeImages[currentSlide]}
-            alt={`Cleaning service ${currentSlide + 1}`}
-            fill
-            className="object-cover transition-all duration-500"
-            priority
+    <div className="absolute inset-0 w-full h-full">
+      {/* Background Images */}
+      <Image
+        src={homeImages[currentSlide]}
+        alt={`Cleaning service ${currentSlide + 1}`}
+        fill
+        className="object-cover transition-all duration-1000"
+        priority
+        unoptimized
+      />
+      
+      {/* Navigation arrows */}
+      <button 
+        onClick={() => goToSlide(currentSlide === 0 ? homeImages.length - 1 : currentSlide - 1)}
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white/30 transition-all z-30"
+      >
+        <span className="text-white text-xl">‹</span>
+      </button>
+      <button 
+        onClick={() => goToSlide((currentSlide + 1) % homeImages.length)}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg hover:bg-white/30 transition-all z-30"
+      >
+        <span className="text-white text-xl">›</span>
+      </button>
+      
+      {/* Slide indicators */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-30">
+        {homeImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentSlide ? 'bg-white' : 'bg-white/50'
+            }`}
           />
-          
-          {/* Navigation arrows */}
-          <button 
-            onClick={() => goToSlide(currentSlide === 0 ? homeImages.length - 1 : currentSlide - 1)}
-            className="absolute left-2 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white/80 rounded-full flex items-center justify-center shadow-md hover:bg-white transition-all z-20"
-          >
-            <span className="text-gray-600">‹</span>
-          </button>
-          <button 
-            onClick={() => goToSlide((currentSlide + 1) % homeImages.length)}
-            className="absolute right-2 top-1/2 transform -translate-y-1/2 w-8 h-8 bg-white/80 rounded-full flex items-center justify-center shadow-md hover:bg-white transition-all z-20"
-          >
-            <span className="text-gray-600">›</span>
-          </button>
-        </div>
-        
-        {/* Slide indicators */}
-        <div className="flex justify-center py-4 space-x-2">
-          {homeImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index === currentSlide ? 'bg-yellow-600' : 'bg-gray-300'
-              }`}
-            />
-          ))}
-        </div>
-        
-        {/* Slide counter */}
-        <div className="text-center pb-4">
-          <span className="text-xs text-gray-500">
-            {currentSlide + 1} of {homeImages.length}
-          </span>
-        </div>
+        ))}
+      </div>
+      
+      {/* Slide counter */}
+      <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 z-30">
+        <span className="text-white/80 text-sm bg-black/20 backdrop-blur-sm px-3 py-1 rounded-full">
+          {currentSlide + 1} of {homeImages.length}
+        </span>
       </div>
     </div>
   );
