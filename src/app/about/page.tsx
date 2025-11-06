@@ -2,25 +2,18 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Button from '@/components/Button';
 import { Card, CardHeader } from '@/components/Card';
+import AHCACertification from '@/components/AHCACertification';
 
 export default function AboutPage() {
-  const ourStory = `Elizabeth's Cleaning Services, LLC was born from a simple yet powerful vision: to transform homes and workplaces into spaces that inspire joy and productivity. Founded by Elizabeth Carter, our journey began with a single mission - to provide cleaning services that go beyond the surface, creating environments that truly reflect the lives and aspirations of our clients.
+  const ourStory = `Founded in Pico Rivera, California, Elizabeth's Cleaning Services, LLC began with a simple vision: to provide professional cleaning services that transform homes and workplaces into spaces of comfort and productivity.
 
-With over a decade of experience in the cleaning industry, Elizabeth recognized a gap in the market for personalized, high-quality cleaning services that treat every space with the care and attention it deserves. What started as a small operation serving local neighborhoods has grown into a trusted partner for residential and commercial cleaning needs throughout the community.
+What started as a local operation has grown into a trusted partner for residential and commercial cleaning throughout Los Angeles County. Our success is built on meticulous attention to detail, genuine care for every space we touch, and lasting relationships with our clients who value quality and reliability.`;
 
-Our commitment to excellence is rooted in our founder's personal philosophy: that a clean space is not just about aesthetics, but about creating harmony between people and their environment. This belief drives everything we do, from the meticulous attention to detail in our cleaning processes to our dedication to building lasting relationships with our clients.
+  const ourMission = `Our mission is to deliver exceptional cleaning services that elevate your quality of life through professional expertise, eco-friendly practices, and personalized care.
 
-Today, Elizabeth's Cleaning Services, LLC continues to grow while maintaining the personal touch and quality standards that have made us a preferred choice for discerning clients who value both results and relationships.`;
+We use safe, eco-friendly products and AHCA-certified techniques to ensure every space meets the highest standards of cleanliness—protecting your family, pets, and the environment.
 
-  const ourMission = `At Elizabeth's Cleaning Services, LLC, our mission is to elevate the quality of life for our clients by delivering exceptional cleaning services that combine professional expertise, eco-friendly practices, and genuine care for every space we touch.
-
-We believe that true cleanliness goes beyond the visible surface. Our trained professionals use industry-leading techniques and premium products to ensure every corner, every surface, and every hidden area meets our uncompromising standards.
-
-We're committed to sustainable cleaning practices that protect both our clients' health and our planet. We use eco-friendly products and methods that are safe for families, pets, and the environment while delivering powerful cleaning results.
-
-Every home and business is unique, and so are our cleaning solutions. We take the time to understand your specific needs, preferences, and schedule to create a customized cleaning plan that fits seamlessly into your lifestyle.
-
-Building lasting relationships requires honesty, reliability, and clear communication. We provide transparent pricing, consistent scheduling, and open dialogue throughout our partnership.`;
+Every client is unique. We create customized cleaning plans that fit your specific needs, schedule, and lifestyle, backed by transparent pricing and reliable service you can trust.`;
 
   return (
     <>
@@ -106,61 +99,8 @@ Building lasting relationships requires honesty, reliability, and clear communic
         </div>
       </section>
 
-      {/* Professional Credentials Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
-              Professional Credentials
-            </h2>
-            <p className="text-xl text-black max-w-3xl mx-auto">
-              Certified by industry-leading organizations to ensure the highest standards of cleaning excellence
-            </p>
-            <div className="w-24 h-1 bg-black mx-auto mt-4"></div>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            {/* Certificate Display - Made Larger */}
-            <div className="order-2 lg:order-1">
-              <div className="relative bg-white rounded-2xl shadow-2xl p-8 border-4 border-black hover:border-elizabeth-gold transition-all duration-300">
-                <div className="aspect-[3/2] relative rounded-xl overflow-hidden">
-                  <Image
-                    src="/About/ahca_certificate.jpeg"
-                    alt="American House Cleaners Association Certificate of Completion"
-                    fill
-                    className="object-contain"
-                    unoptimized
-                  />
-                </div>
-                {/* Certificate Badge - Using Brand Colors */}
-                <div className="absolute -top-6 -right-6 w-20 h-20 bg-elizabeth-gradient-diagonal rounded-full flex items-center justify-center shadow-lg border-4 border-white">
-                  <svg className="w-10 h-10 text-black" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2L13.09 8.26L19 7L14.74 12L19 17L13.09 15.74L12 22L10.91 15.74L5 17L9.26 12L5 7L10.91 8.26L12 2Z"/>
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            {/* Credentials Content - Simplified */}
-            <div className="order-1 lg:order-2">
-              <div className="bg-white rounded-xl p-8 shadow-lg border-l-4 border-elizabeth-gold">
-                <h3 className="text-2xl font-bold text-black mb-4">
-                  AHCA Certified Professional
-                </h3>
-                <p className="text-black mb-4">
-                  Nancy Elizabeth Torres has successfully completed the American House Cleaners Association Certification Course, demonstrating expertise in professional cleaning standards and health-focused cleaning practices.
-                </p>
-                <div className="flex items-center text-sm text-black">
-                  <svg className="w-4 h-4 mr-2 text-black" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                  </svg>
-                  Certified: May 2023
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Professional Credentials Section - Using Component (fondo blanco) */}
+      <AHCACertification bgWhite />
 
       {/* Our Team Section */}
       <section className="py-20 bg-elizabeth-gradient-diagonal">
