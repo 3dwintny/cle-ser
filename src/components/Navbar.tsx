@@ -33,9 +33,11 @@ export default function Navbar() {
     <nav
       className={cn(
         'fixed top-0 w-full z-50 transition-all duration-300',
-        isScrolled
-          ? 'bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-200'
-          : 'bg-transparent'
+        pathname === '/' && !isScrolled
+          ? 'bg-transparent'
+          : isScrolled
+            ? 'bg-white shadow-sm border-b border-gray-200'
+            : 'bg-transparent'
       )}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,11 +47,11 @@ export default function Navbar() {
             <Link href="/" className="flex items-center">
               {!logoError ? (
                 <Image
-                  src="/LOGOS/logo-sin-fondo.png"
+                  src={pathname === '/' && !isScrolled ? "/LOGOS/logo-en-blanco.png" : "/LOGOS/logo-sin-fondo.png"}
                   alt="Elizabeth's Cleaning Services, LLC"
                   width={120}
                   height={120}
-                  className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 object-contain"
+                  className="h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 object-contain transition-opacity duration-300"
                   priority
                   unoptimized
                   onError={() => {
@@ -60,8 +62,8 @@ export default function Navbar() {
               ) : (
                 <span className={cn(
                   'text-2xl sm:text-3xl font-bold transition-colors',
-                  isScrolled 
-                    ? 'text-black hover:opacity-80' 
+                  pathname === '/' && !isScrolled
+                    ? 'text-white hover:opacity-80' 
                     : 'text-black hover:opacity-80'
                 )}>
                   Elizabeth&apos;s Cleaning
@@ -78,13 +80,15 @@ export default function Navbar() {
                   key={item.name}
                   href={item.href}
                   className={cn(
-                    'px-3 py-2 rounded-md text-sm font-medium transition-colors',
+                    'px-4 py-2 rounded-md text-base font-semibold transition-colors',
                     pathname === item.href
-                      ? isScrolled
-                        ? 'text-black border-b-2 border-black shadow-sm bg-elizabeth-gradient-diagonal'
-                        : 'text-black bg-white border-b-2 border-black shadow-sm'
-                      : isScrolled
-                        ? 'text-black hover:opacity-80 hover:bg-white/50'
+                      ? pathname === '/' && !isScrolled
+                        ? 'text-white border-b-2 border-white shadow-sm bg-white/10'
+                        : isScrolled
+                          ? 'text-black border-b-2 border-black shadow-sm bg-elizabeth-gradient-diagonal'
+                          : 'text-black border-b-2 border-black shadow-sm bg-white'
+                      : pathname === '/' && !isScrolled
+                        ? 'text-white hover:opacity-80 hover:bg-white/10'
                         : 'text-black hover:opacity-80 hover:bg-white/50'
                   )}
                 >
@@ -97,18 +101,23 @@ export default function Navbar() {
           {/* Contact Info */}
           <div className="hidden md:flex items-center space-x-4">
             <div className={cn(
-              'flex items-center space-x-2 transition-colors',
-              isScrolled ? 'text-black' : 'text-black'
+              "flex items-center space-x-2 transition-colors",
+              pathname === '/' && !isScrolled ? 'text-white' : 'text-black'
             )}>
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
               </svg>
-              <span className="text-sm font-medium">(562) 639-2990</span>
+              <span className="text-base font-semibold">(562) 639-2990</span>
             </div>
             <a href="tel:+1-562-639-2990">
               <Button 
                 size="sm" 
-                className="bg-black hover:bg-gray-800 text-white border border-black shadow-md transition-colors"
+                className={cn(
+                  "shadow-md transition-colors text-base font-semibold",
+                  pathname === '/' && !isScrolled
+                    ? 'bg-white hover:bg-gray-100 text-black border border-white'
+                    : 'bg-black hover:bg-gray-800 text-white border border-black'
+                )}
               >
                 Contact
               </Button>
@@ -120,10 +129,10 @@ export default function Navbar() {
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={cn(
-                'inline-flex items-center justify-center p-2 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-inset',
-                isScrolled 
-                  ? 'text-black hover:opacity-80 focus:ring-black' 
-                  : 'text-black hover:opacity-80 focus:ring-black'
+                "inline-flex items-center justify-center p-2 rounded-md hover:opacity-80 focus:outline-none focus:ring-2 focus:ring-inset transition-colors",
+                pathname === '/' && !isScrolled
+                  ? 'text-white focus:ring-white'
+                  : 'text-black focus:ring-black'
               )}
               aria-expanded={isMobileMenuOpen}
               aria-label="Toggle mobile menu"
@@ -167,9 +176,9 @@ export default function Navbar() {
                 className={cn(
                   'block px-3 py-2 rounded-md text-base font-medium',
                   pathname === item.href
-                    ? isScrolled
+                    ? isScrolled || pathname === '/'
                       ? 'text-black border-l-4 border-black bg-elizabeth-gradient-diagonal'
-                      : 'text-black bg-white border-l-4 border-black'
+                      : 'text-black border-l-4 border-black bg-white'
                     : 'text-black hover:opacity-80 hover:bg-gray-50'
                 )}
                 onClick={() => setIsMobileMenuOpen(false)}
