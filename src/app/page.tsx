@@ -1,11 +1,83 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import Button from '@/components/Button';
 import PhotoSlider from '@/components/PhotoSlider';
 
 export default function Home() {
+  const [showCertificateModal, setShowCertificateModal] = useState(false);
+  const [currentReview, setCurrentReview] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Reviews data - REALES de Google
+  const reviews = [
+    {
+      name: "Jajaira Rodriguez",
+      date: "5 months ago",
+      rating: 5,
+      text: "I've been using this cleaning service for biweekly cleanings, and I couldn't be happier! Every time they leave, my home feels so fresh and spotless. The little details, like the folds on my towels, toilet paper, and even paper towels - it's those thoughtful touches that really stand out.",
+      initial: "J"
+    },
+    {
+      name: "Sophia Garcia",
+      date: "4 months ago",
+      rating: 5,
+      text: "Elizabeth and her team always does a wonderful job! They go above and beyond what I expect and they have the best customer service! I love that my house smells super clean without being over bearing with cleaning product scents.",
+      initial: "S"
+    },
+    {
+      name: "Jenny Moya",
+      date: "A year ago",
+      rating: 5,
+      text: "Hired Elizabeth's cleaning services for my house and I really like overall their services. Very punctual and professional, I love that the product being used does not damage any of my furniture. My bathroom is spotless now, the shower glass had stains for years and now it looks brand new, very shining.",
+      initial: "J"
+    },
+    {
+      name: "Yvonne Williams",
+      date: "A year ago",
+      rating: 5,
+      text: "I am positively thrilled that a good friend recommended them to me. Elizabeth's Cleaning Service is detail oriented and so cheerful while they do an outstanding job! When they are done cleaning, my home smells wonderful and not full of strong chemicals.",
+      initial: "Y"
+    },
+    {
+      name: "Natali Alvarez",
+      date: "A year ago",
+      rating: 5,
+      text: "Elizabeth's cleaning services are extremely professional, friendly and efficient. You can tell they care about their clients by the quality of work they provide. They always do an outstanding job, and I'm never disappointed with their work.",
+      initial: "N"
+    },
+    {
+      name: "Tammy Boren",
+      date: "A year ago",
+      rating: 5,
+      text: "The ladies at Elizabeth Cleaning Service really care & do amazing job. They feel like part of the family now. They take pride in their work & the level of detail is so appreciated. They have so many magic tricks to address hard to clean or problem areas.",
+      initial: "T"
+    }
+  ];
+
+  // Detectar si es móvil
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Auto-rotate reviews every 3 seconds - infinito
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentReview((prev) => prev + 1);
+    }, 3000);
+    
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <>
       {/* Hero Section */}
@@ -13,8 +85,8 @@ export default function Home() {
         {/* Background Slider */}
         <div className="absolute inset-0">
           <PhotoSlider />
-          {/* White overlay for text readability */}
-          <div className="absolute inset-0 bg-white/60"></div>
+          {/* Dark overlay for better text contrast - like Pro Help example */}
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/40 to-black/60"></div>
         </div>
 
         {/* Content - Centered Layout */}
@@ -23,29 +95,43 @@ export default function Home() {
             
             {/* Main Content */}
             <div>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black mb-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6" 
+                  style={{ 
+                    textShadow: '0 0 20px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.6), 1px 1px 2px rgba(0,0,0,0.9), -1px -1px 2px rgba(0,0,0,0.9), 1px -1px 2px rgba(0,0,0,0.9), -1px 1px 2px rgba(0,0,0,0.9)'
+                  }}>
                 Elizabeth&apos;s Cleaning Services, LLC
               </h1>
-              <p className="text-xl sm:text-2xl text-black/90 mb-6">
+              <p className="text-xl sm:text-2xl text-white mb-6" 
+                 style={{ 
+                   textShadow: '0 0 15px rgba(0,0,0,0.7), 0 0 30px rgba(0,0,0,0.5), 1px 1px 1px rgba(0,0,0,0.8), -1px -1px 1px rgba(0,0,0,0.8)'
+                 }}>
                 Professional Home & Office Cleaning Services
               </p>
               
               {/* Description */}
               <div className="mb-8">
-                    <p className="text-lg text-black/80 leading-relaxed">
-                      <span className="font-semibold text-red-600">Trusted cleaning</span> for your home and office. Our professional team guarantees exceptional service with eco-friendly products and advanced techniques.<span className="font-semibold text-black">Your perfect space, every visit!</span>
+                    <p className="text-lg text-white leading-relaxed" 
+                       style={{ 
+                         textShadow: '0 0 15px rgba(0,0,0,0.7), 1px 1px 1px rgba(0,0,0,0.9), -1px -1px 1px rgba(0,0,0,0.9)'
+                       }}>
+                      <span className="font-semibold text-yellow-300" 
+                            style={{ 
+                              textShadow: '0 0 15px rgba(0,0,0,0.8), 1px 1px 2px rgba(0,0,0,1), -1px -1px 2px rgba(0,0,0,1)'
+                            }}>
+                        Trusted cleaning
+                      </span> for your home and office. Our professional team guarantees exceptional service with eco-friendly products and advanced techniques. <span className="font-semibold text-white">Your perfect space, every visit!</span>
                     </p>
               </div>
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="tel:+1-562-639-2990">
-                      <Button size="lg" className="bg-black hover:bg-gray-800 text-white shadow-lg border border-black">
+                      <Button size="lg" className="bg-white hover:bg-gray-100 text-black shadow-xl border-2 border-white font-bold">
                         📞 Call Now
                       </Button>
                     </a>
                     <Link href="/contact">
-                      <Button variant="outline" size="lg" className="border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-white shadow-lg bg-white/90 backdrop-blur-sm">
+                      <Button variant="outline" size="lg" className="border-2 border-yellow-300 text-yellow-300 hover:bg-yellow-300 hover:text-black shadow-xl bg-transparent backdrop-blur-sm font-bold">
                         Get Quote
                       </Button>
                     </Link>
@@ -57,8 +143,8 @@ export default function Home() {
 
             {/* Scroll Indicator */}
             <div className="absolute bottom-32 left-1/2 transform -translate-x-1/2">
-              <div className="w-6 h-10 border-2 border-black/50 rounded-full flex justify-center">
-                <div className="w-1 h-3 bg-black/50 rounded-full mt-2 animate-bounce"></div>
+              <div className="w-6 h-10 border-2 border-white/70 rounded-full flex justify-center">
+                <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-bounce"></div>
               </div>
             </div>
       </section>
@@ -86,8 +172,132 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Our Services */}
+      {/* Professional Certification Section - AHCA */}
       <section className="py-24 bg-elizabeth-gradient-diagonal">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Two Column Layout */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            
+            {/* Left: Logo - Larger on desktop */}
+            <div className="flex justify-center lg:justify-end">
+              <div 
+                className="cursor-pointer group transform rotate-6 transition-transform duration-300 group-hover:rotate-0"
+                onClick={() => setShowCertificateModal(true)}
+                role="button"
+                tabIndex={0}
+                aria-label="Click to view AHCA certificate"
+              >
+                <div className="relative">
+                  {/* Recuadro blanco con efecto brochazo */}
+                  <div className="relative bg-white p-12 shadow-2xl transition-all duration-300 group-hover:shadow-3xl group-hover:-translate-y-2 overflow-hidden">
+                    {/* Esquina izquierda - efecto brochazo blanco */}
+                    <div className="absolute top-0 left-0 w-24 h-full bg-gradient-to-r from-white via-white/50 to-transparent pointer-events-none"></div>
+                    {/* Esquina derecha - efecto brochazo blanco */}
+                    <div className="absolute top-0 right-0 w-24 h-full bg-gradient-to-l from-white via-white/50 to-transparent pointer-events-none"></div>
+                    
+                    {/* Imagen completamente RECTA - sin bordes */}
+                    <div className="relative z-10 transform -rotate-6">
+                      <div className="bg-white p-1">
+                        <Image
+                          src="/Home/ahca_certificacion.jpeg"
+                          alt="AHCA Certification"
+                          width={500}
+                          height={500}
+                          className="w-full h-auto block"
+                          unoptimized
+                        />
+                      </div>
+                    </div>
+                    
+                    {/* Hover overlay */}
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-all duration-300 flex items-center justify-center z-20 transform -rotate-6">
+                      <span className="text-white bg-black/70 px-6 py-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 font-semibold">
+                        View Certificate
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Text Content */}
+            <div className="space-y-6">
+              <div>
+                <p className="text-sm font-bold tracking-[0.2em] uppercase text-black/70 mb-8">
+                  First Class Service Guaranteed
+                </p>
+              </div>
+              
+              <h2 className="text-4xl sm:text-5xl font-bold text-black leading-tight mb-8">
+                AHCA Certified Professional Cleaners in Los Angeles, CA
+              </h2>
+              
+              <p className="text-xl text-black/80 leading-relaxed">
+                <span className="font-bold text-black">Elizabeth&apos;s Cleaning Services, LLC</span> holds professional certification from the 
+                <span className="font-bold text-black"> American House Cleaners Association</span>—a nationally recognized organization dedicated to advancing professional standards and best practices in the residential and commercial cleaning industry.
+              </p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* Certificate Modal */}
+      {showCertificateModal && (
+        <div 
+          className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 animate-fadeIn"
+          onClick={() => setShowCertificateModal(false)}
+        >
+          <div className="relative max-w-6xl w-full bg-white rounded-2xl p-4 sm:p-8 shadow-2xl">
+            {/* Close Button */}
+            <button
+              onClick={() => setShowCertificateModal(false)}
+              className="absolute top-2 right-2 sm:top-4 sm:right-4 bg-black text-white rounded-full p-2 hover:bg-gray-800 transition-colors z-10"
+              aria-label="Close modal"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            {/* Certificate Image */}
+            <div className="relative w-full" style={{ aspectRatio: '3/2' }}>
+              <Image
+                src="/About/ahca_certificate.jpeg"
+                alt="AHCA Certificate - American House Cleaners Association - Nancy Elizabeth Torres"
+                fill
+                className="object-contain"
+                unoptimized
+              />
+            </div>
+
+            {/* Certificate Info */}
+            <div className="mt-6 text-center">
+              <h3 className="text-2xl font-bold text-black mb-2">
+                Professional AHCA Certificate
+              </h3>
+              <p className="text-gray-700 mb-4">
+                Nancy Elizabeth Torres - Certified May 2023
+              </p>
+              <a 
+                href="https://www.theahca.org/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-black hover:text-gray-700 font-semibold"
+              >
+                🌐 American House Cleaners Association
+                <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Our Services */}
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* Services Header */}
@@ -237,11 +447,11 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Baseboards & Floor Care */}
+            {/* Carpet & Floor Care */}
             <div className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group">
               <div className="relative h-80 overflow-hidden">
                 <Image
-                  src="/service/almacen.jpeg"
+                  src="/service/almacen_carpet.jpeg"
                   alt="Professional baseboards and door frames cleaning"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
@@ -250,9 +460,9 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
               <div className="p-8">
-                <h3 className="text-2xl font-bold text-black mb-4">Baseboards & Floor Care</h3>
+                <h3 className="text-2xl font-bold text-black mb-4">Carpet & Floor Cleaning Experts</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  Specialized cleaning for baseboards, door frames, carpet cleaning, and professional floor care including stone, marble polishing, and buffing.
+                Professional and reliable cleaning services to make your floors and carpets look like new.
                 </p>
                 <ul className="text-gray-700 space-y-2 mb-8">
                   <li className="flex items-center">
@@ -284,7 +494,133 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
+      {/* Customer Reviews Section - FONDO DORADO */}
+      <section className="py-24 bg-elizabeth-gradient-diagonal overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          
+          {/* Header */}
+          <div className="text-center mb-12">
+            <h2 className="text-4xl sm:text-5xl font-bold text-black mb-4">
+              TRUSTED BY DOZENS
+            </h2>
+            <p className="text-xl text-black/80 max-w-3xl mx-auto">
+              See what our happy Pico Rivera, CA customers are saying — <span className="font-bold text-black">4.9 ⭐ rating</span> on Google
+            </p>
+          </div>
+
+          {/* Google Rating Badge - Clickeable y elegante */}
+          <div className="flex justify-center mb-12">
+            <a 
+              href="https://www.google.com/search?sca_esv=a7a7f7107bf5a5bb&cs=1&sxsrf=AE3TifMUlZRhce-Eyzt0XQ-eLsVo91vtvg:1762411433786&si=AMgyJEtREmoPL4P1I5IDCfuA8gybfVI2d5Uj7QMwYCZHKDZ-EyNJdekwLDAaq6kH8FY55t6NKNOj6JQRRZOX5lrLd9PUx_nppuTCn-6fFbkkbx_JBtENVmkr746I2t0syS_lhT45p8McoW8qT2dAwd77fnLXenXtrg%3D%3D&q=Elizabeth%27s+cleaning+services+Reviews&sa=X&ved=2ahUKEwjQ1dWb9tyQAxXMRzABHZ6CCRMQ0bkNegQIIxAE&cshid=1762411526065125&biw=1695&bih=921&dpr=2" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block bg-white rounded-2xl shadow-2xl p-8 border-2 border-white/50 hover:shadow-3xl hover:scale-105 transition-all duration-300 cursor-pointer group"
+            >
+              <div className="text-center">
+                <p className="text-3xl font-bold text-black mb-2 group-hover:text-gray-700 transition-colors">4.9</p>
+                <div className="flex items-center justify-center gap-1 mb-4">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <svg key={star} className="w-8 h-8 text-yellow-400 fill-current group-hover:text-yellow-500 transition-colors" viewBox="0 0 20 20">
+                      <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-gray-600 mb-4 group-hover:text-gray-800 transition-colors">
+                  Based on <span className="font-bold text-black">38 reviews</span>
+                </p>
+                <div className="flex items-center justify-center gap-2 mb-3">
+                  <svg className="w-6 h-6" viewBox="0 0 24 24">
+                    <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                    <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                    <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                    <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                  </svg>
+                  <span className="font-semibold text-black group-hover:text-gray-700 transition-colors">Google</span>
+                </div>
+                {/* Subtle hint text */}
+                <p className="text-xs text-gray-400 group-hover:text-gray-600 transition-colors italic">
+                  Click to see all 38 reviews
+                </p>
+              </div>
+            </a>
+          </div>
+
+          {/* Reviews Slider - Infinito */}
+          <div className="max-w-6xl mx-auto">
+              <div className="relative">
+                {/* Reviews Slider */}
+                <div className="overflow-hidden">
+                  <div 
+                    className="flex transition-transform duration-700 ease-in-out"
+                    style={{ 
+                      transform: `translateX(-${(currentReview % reviews.length) * (isMobile ? 100 : 100/3)}%)` 
+                    }}
+                  >
+                    {/* Duplicamos los reviews para efecto infinito */}
+                    {[...reviews, ...reviews, ...reviews].map((review, index) => (
+                      <div key={index} className="w-full md:w-1/3 flex-shrink-0 px-4 md:px-4">
+                        <div className="bg-white rounded-2xl shadow-2xl p-6 md:p-7 border-2 border-white/80 hover:shadow-3xl hover:scale-105 transition-all duration-300 h-full">
+                          {/* Header */}
+                          <div className="flex items-start gap-3 mb-4">
+                            {/* Avatar */}
+                            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-elizabeth-gradient-diagonal flex items-center justify-center text-white text-lg font-bold shadow-lg">
+                              {review.initial}
+                            </div>
+                            
+                            {/* Name, Date, and Stars */}
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-center justify-between mb-1">
+                                <h3 className="text-base font-bold text-black truncate pr-2">{review.name}</h3>
+                                <svg className="w-5 h-5 flex-shrink-0" viewBox="0 0 24 24">
+                                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
+                                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+                                </svg>
+                              </div>
+                              <p className="text-xs text-gray-500 mb-2">{review.date}</p>
+                              <div className="flex gap-1">
+                                {[...Array(review.rating)].map((_, i) => (
+                                  <svg key={i} className="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                                    <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                  </svg>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                          
+                          {/* Review Text */}
+                          <p className="text-gray-700 text-sm md:text-base leading-relaxed">
+                            {review.text}
+                          </p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Navigation Dots */}
+                <div className="flex justify-center gap-2 mt-8">
+                  {reviews.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentReview(index)}
+                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                        (currentReview % reviews.length) === index 
+                          ? 'bg-black w-8' 
+                          : 'bg-white/60 hover:bg-white/80'
+                      }`}
+                      aria-label={`Go to review ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Why Choose Us Section - FONDO BLANCO */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">

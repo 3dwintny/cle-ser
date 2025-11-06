@@ -96,16 +96,23 @@ export default function ContactPage() {
     setSubmitStatus('idle');
 
     try {
-      // Enviar datos al API endpoint
-      const response = await fetch('/api/contact', {
+      // Send directly to FormSubmit.co AJAX endpoint (works from browser)
+      const response = await fetch('https://formsubmit.co/ajax/tecnotony8@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
+          'Accept': 'application/json'
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone || 'Not provided',
+          message: formData.message,
+          _subject: `New Contact - Elizabeth's Cleaning - ${formData.name}`,
+          _template: 'table',
+          _captcha: 'false'
+        })
       });
-
-      const data = await response.json();
 
       if (response.ok) {
         setSubmitStatus('success');
@@ -115,17 +122,11 @@ export default function ContactPage() {
           phone: '',
           message: ''
         });
-        
-        // Mostrar advertencia si los correos no están configurados
-        if (data.warning) {
-          console.warn('⚠️ ', data.warning);
-          console.info('📖 Lee CONFIGURACION_CORREOS.md para configurar el envío de correos');
-        }
       } else {
         setSubmitStatus('error');
       }
     } catch (error) {
-      console.error('Error al enviar el formulario:', error);
+      console.error('Error sending form:', error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -198,13 +199,12 @@ export default function ContactPage() {
                 <Textarea
                   label="Message *"
                   placeholder="Tell us about your cleaning needs... 
-
-Examples:
-• Regular house cleaning (weekly/bi-weekly)
-• One-time deep clean
-• Move-in/move-out cleaning
-• Office cleaning services
-• Special requests or concerns"
+                    Examples:
+                    • Regular house cleaning (weekly/bi-weekly)
+                    • One-time deep clean
+                    • Move-in/move-out cleaning
+                    • Office cleaning services
+                    • Special requests or concerns"
                   value={formData.message}
                   onChange={handleInputChange('message')}
                   error={errors.message}

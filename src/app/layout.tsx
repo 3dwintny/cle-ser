@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
-import { Inter, Noto_Sans_Thai } from "next/font/google";
+import { Mukta, Noto_Sans_Thai } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const inter = Inter({
+const mukta = Mukta({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-mukta",
+  weight: ["200", "300", "400", "500", "600", "700", "800"],
 });
 
 const notoSansThai = Noto_Sans_Thai({
@@ -121,7 +122,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.variable} ${notoSansThai.variable} font-sans antialiased`}>
+      <body className={`${mukta.variable} ${notoSansThai.variable} font-sans antialiased`}>
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
