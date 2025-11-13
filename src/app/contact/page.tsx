@@ -4,6 +4,8 @@ import { useState } from 'react';
 import Button from '@/components/Button';
 import { Input, Textarea } from '@/components/FormControls';
 import { Card, CardBody } from '@/components/Card';
+import PhoneInput from 'react-phone-input-2';
+import 'react-phone-input-2/lib/style.css';
 
 interface FormData {
   name: string;
@@ -51,8 +53,8 @@ export default function ContactPage() {
 
     // Phone validation (optional but with format check if provided)
     if (formData.phone.trim()) {
-      const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
-      if (!phoneRegex.test(formData.phone.replace(/[\s\-\(\)]/g, ''))) {
+      // PhoneInput devuelve solo números con código de país (ej: "15626392990")
+      if (formData.phone.length < 10) {
         newErrors.phone = 'Please enter a valid phone number';
       }
     }
@@ -187,14 +189,48 @@ export default function ContactPage() {
                   />
                 </div>
 
-                <Input
-                  label="Phone Number"
-                  type="tel"
-                  placeholder="Phone Number"
-                  value={formData.phone}
-                  onChange={handleInputChange('phone')}
-                  error={errors.phone}
-                />
+                {/* Phone Input with Country Selector */}
+                <div className="space-y-2">
+                  <label className="block text-sm font-semibold text-gray-900">
+                    Phone Number
+                  </label>
+                  <PhoneInput
+                    country={'us'}
+                    value={formData.phone}
+                    onChange={(phone) => {
+                      setFormData(prev => ({ ...prev, phone }));
+                      if (errors.phone) {
+                        setErrors(prev => ({ ...prev, phone: undefined }));
+                      }
+                    }}
+                    inputStyle={{
+                      width: '100%',
+                      height: '48px',
+                      fontSize: '16px',
+                      paddingLeft: '48px',
+                      border: errors.phone ? '2px solid #ef4444' : '2px solid #e5e7eb',
+                      borderRadius: '0.5rem',
+                      fontFamily: 'inherit'
+                    }}
+                    buttonStyle={{
+                      border: errors.phone ? '2px solid #ef4444' : '2px solid #e5e7eb',
+                      borderRight: 'none',
+                      borderRadius: '0.5rem 0 0 0.5rem',
+                      backgroundColor: 'white'
+                    }}
+                    dropdownStyle={{
+                      borderRadius: '0.5rem',
+                      border: '2px solid #e5e7eb'
+                    }}
+                    containerClass="phone-input-container"
+                    enableSearch={true}
+                    searchPlaceholder="Search country..."
+                    preferredCountries={['us', 'mx', 'ca']}
+                  />
+                  {errors.phone && (
+                    <p className="text-sm text-red-600 mt-1">{errors.phone}</p>
+                  )}
+                </div>
 
                 <Textarea
                   label="Message *"

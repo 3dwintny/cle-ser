@@ -150,3 +150,55 @@ body {
 .animate-fadeIn {
   animation: fadeIn 0.3s ease-in-out;
 }
+
+/* 📱 Phone Input Personalizado - Elizabeth's Cleaning */
+.phone-input-container .react-tel-input .form-control {
+  transition: all 0.3s ease;
+}
+
+.phone-input-container .react-tel-input .form-control:focus {
+  border-color: #d4af37 !important;
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1) !important;
+  outline: none;
+}
+
+.phone-input-container .react-tel-input .flag-dropdown:hover {
+  background-color: #f9fafb !important;
+}
+
+.phone-input-container .react-tel-input .flag-dropdown.open {
+  background-color: white !important;
+  border-color: #d4af37 !important;
+}
+
+.phone-input-container .react-tel-input .country-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.phone-input-container .react-tel-input .country-list .country:hover {
+  background-color: #fef3c7 !important;
+}
+
+.phone-input-container .react-tel-input .country-list .country.highlight {
+  background-color: #fef3c7 !important;
+}
+
+.phone-input-container .react-tel-input .search {
+  padding: 10px;
+  background-color: #f9fafb;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.phone-input-container .react-tel-input .search-box {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid #e5e7eb;
+  border-radius: 0.375rem;
+  font-family: inherit;
+}
+
+.phone-input-container .react-tel-input .search-box:focus {
+  border-color: #d4af37 !important;
+  outline: none;
+}
