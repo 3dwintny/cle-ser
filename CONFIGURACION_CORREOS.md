@@ -2,9 +2,35 @@
 
 ## ¿Dónde llegan los mensajes del formulario?
 
-Actualmente, los mensajes **NO se envían automáticamente**. Se registran solo en la consola del servidor.
+**✅ ACTUALIZACIÓN:** Ahora usamos **FormSubmit.co** que envía los mensajes directamente al correo **elizabethscleaningservice7@gmail.com**.
 
-Para recibir los mensajes por correo electrónico, debes seguir uno de estos métodos:
+Los mensajes llegan automáticamente sin necesidad de configurar nada adicional.
+
+---
+
+## 📬 Correo Actual Configurado
+
+**Correo de destino:** `elizabethscleaningservice7@gmail.com`
+
+Los formularios de contacto envían automáticamente a este correo usando FormSubmit.co.
+
+---
+
+## 🔧 ¿Necesitas cambiar el correo?
+
+Si necesitas cambiar el correo de destino, edita el archivo:
+- `src/app/contact/page.tsx` (línea ~100)
+
+Busca: `https://formsubmit.co/ajax/elizabethscleaningservice7@gmail.com`
+Y reemplaza con tu nuevo correo.
+
+---
+
+# 📜 Configuración Antigua (Ya NO se usa)
+
+**NOTA:** La siguiente configuración es para referencia histórica. Ya NO usamos API routes ni estos métodos.
+
+Para recibir los mensajes por correo electrónico, se podían seguir estos métodos:
 
 ---
 

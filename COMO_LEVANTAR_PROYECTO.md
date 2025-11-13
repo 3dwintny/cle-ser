@@ -58,32 +58,16 @@ cd /Volumes/KINGSTON/2025/SEMETRE_2/GTEQ/Elizabeth-clean/elizabeth-clean
 npm install
 ```
 
-### 4️⃣ **Configurar Variables de Entorno (Opcional)**
+### 4️⃣ **Configuración de Correos**
 
-Si quieres que el formulario de contacto envíe correos reales:
+✅ **Ya está configurado automáticamente!**
 
-```bash
-# Crear archivo de configuración
-touch .env.local
+El formulario de contacto envía mensajes directamente a:
+**elizabethscleaningservice7@gmail.com**
 
-# Editar el archivo con tus datos
-nano .env.local
-```
+Usa **FormSubmit.co** - No necesitas configurar nada adicional.
 
-Contenido del `.env.local`:
-```env
-# Email donde recibirás los mensajes
-CONTACT_EMAIL=tu-email@gmail.com
-
-# Para Gmail (más fácil)
-EMAIL_USER=tu-email@gmail.com
-EMAIL_PASSWORD=tu-contraseña-de-aplicacion
-
-# O para Resend (recomendado)
-# RESEND_API_KEY=re_123456789
-```
-
-**Nota:** Lee `CONFIGURACION_CORREOS.md` para instrucciones detalladas.
+**Nota:** Si necesitas cambiar el correo, lee `CONFIGURACION_CORREOS.md`.
 
 ### 5️⃣ **Levantar el Servidor**
 
@@ -151,13 +135,14 @@ npm run dev -- -p 3001
 ✅ **Completado:**
 - Formulario de contacto arreglado (sin duplicados)
 - Sección de precios eliminada
-- Sistema de correos configurado
+- Sistema de correos configurado con FormSubmit.co
+- Correo configurado: elizabethscleaningservice7@gmail.com
 - Nombres del equipo corregidos
 - Navegación actualizada
+- Google Reviews integrado
 
 ⚠️ **Pendiente:**
 - Actualizar Node.js a versión 18+
-- Configurar envío de correos (opcional)
 - Agregar imágenes reales (opcional)
 
 ---

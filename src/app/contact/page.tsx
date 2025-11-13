@@ -97,7 +97,7 @@ export default function ContactPage() {
 
     try {
       // Send directly to FormSubmit.co AJAX endpoint (works from browser)
-      const response = await fetch('https://formsubmit.co/ajax/tecnotony8@gmail.com', {
+      const response = await fetch('https://formsubmit.co/ajax/elizabethscleaningservice7@gmail.com', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -204,6 +204,7 @@ export default function ContactPage() {
                     • One-time deep clean
                     • Move-in/move-out cleaning
                     • Office cleaning services
+                    • Commercial cleaning
                     • Special requests or concerns"
                   value={formData.message}
                   onChange={handleInputChange('message')}
