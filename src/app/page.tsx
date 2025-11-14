@@ -211,27 +211,39 @@ export default function Home() {
               </div>
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-black mb-4">Residential Cleaning</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  Complete home cleaning services for all living spaces. Regular maintenance and deep cleaning available to keep your home spotless and comfortable.
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  Experience the comfort of a spotless home with Elizabeth Cleaning Services. Our professional team provides meticulous cleaning solutions designed to refresh every corner of your home. We combine attention to detail with care and discretion, ensuring a clean, welcoming, and harmonious environment.
                 </p>
-                <ul className="text-gray-700 space-y-2 mb-8">
+                <p className="text-gray-700 font-semibold mb-3">Our Residential Cleaning includes:</p>
+                <ul className="text-gray-700 space-y-2 mb-4">
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
-                    All rooms and living areas
+                    Complete dusting and vacuuming of all rooms
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
-                    Kitchen and bathroom detail
+                    Mopping and floor care
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
-                    Vacuum and mop floors
+                    Deep cleaning of bathrooms and kitchens
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
-                    Dust all surfaces
+                    Disinfection of high-touch areas (light switches, handles, etc.)
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
+                    Interior window cleaning and baseboards
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
+                    Trash removal and surface organization
                   </li>
                 </ul>
+                <p className="text-gray-600 mb-6 leading-relaxed italic">
+                  Whether you need weekly, biweekly, or occasional service, we tailor every visit to meet your home&apos;s unique needs.
+                </p>
                 <Link href="/contact">
                   <Button className="w-full bg-black hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
                     Get Quote
@@ -254,27 +266,39 @@ export default function Home() {
               </div>
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-black mb-4">Commercial Cleaning</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  Professional office and business cleaning services. Flexible scheduling to fit your business hours and maintain a pristine work environment.
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  At Elizabeth Cleaning Services, we understand that a clean workspace reflects professionalism and inspires productivity. Our commercial cleaning programs are designed for offices, stores, and business facilities of all sizes. We maintain your space in pristine condition so your clients and team can focus on what truly matters.
                 </p>
-                <ul className="text-gray-700 space-y-2 mb-8">
+                <p className="text-gray-700 font-semibold mb-3">Our Commercial Cleaning includes:</p>
+                <ul className="text-gray-700 space-y-2 mb-4">
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
-                    Office spaces and workstations
+                    Office and lobby cleaning
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
-                    Common areas and reception
+                    Dusting, vacuuming, and mopping
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
-                    Post-construction cleanup
+                    Restroom sanitation and restocking supplies
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
-                    Restroom sanitization
+                    Kitchen and breakroom cleaning
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
+                    Interior glass and window cleaning
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
+                    Trash removal and surface disinfecting
                   </li>
                 </ul>
+                <p className="text-gray-600 mb-6 leading-relaxed italic">
+                  We customize our cleaning schedules to your business hours — daily, weekly, or after-hours service available.
+                </p>
                 <Link href="/contact">
                   <Button className="w-full bg-black hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
                     Get Quote
@@ -297,27 +321,39 @@ export default function Home() {
               </div>
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-black mb-4">Deep Cleaning</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                  Comprehensive deep cleaning service for special occasions or annual maintenance. We go beyond surface cleaning to restore your space to its original beauty.
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  Bring your home or business to its best condition with our detailed deep-cleaning service. We focus on every corner — visible or hidden — for a truly refreshed space.
                 </p>
-                <ul className="text-gray-700 space-y-2 mb-8">
+                <p className="text-gray-700 font-semibold mb-3">Our Deep Cleaning includes:</p>
+                <ul className="text-gray-700 space-y-2 mb-4">
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
-                    Window cleaning inside & out
+                    Detailed cleaning of bathrooms and kitchens
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
-                    Appliance deep clean
+                    Disinfection of high-touch surfaces
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
-                    Furniture and upholstery
+                    Baseboards, doors, and frames cleaned by hand
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
-                    Baseboards and trim
+                    Inside and behind appliances (oven, fridge, etc.)
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
+                    Dust removal from vents, fans, and light fixtures
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
+                    Floors vacuumed, mopped, and sanitized
                   </li>
                 </ul>
+                <p className="text-gray-600 mb-6 leading-relaxed italic">
+                  Perfect for move-ins, move-outs, seasonal cleaning, or post-renovation care.
+                </p>
                 <Link href="/contact">
                   <Button className="w-full bg-black hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
                     Get Quote
@@ -340,27 +376,35 @@ export default function Home() {
               </div>
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-black mb-4">Carpet & Floor Cleaning Experts</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">
-                Professional and reliable cleaning services to make your floors and carpets look like new.
+                <p className="text-gray-600 mb-4 leading-relaxed">
+                  Protect and restore the beauty of your floors and carpets with our specialized cleaning treatments.
                 </p>
-                <ul className="text-gray-700 space-y-2 mb-8">
+                <p className="text-gray-700 font-semibold mb-3">Our Floor Care includes:</p>
+                <ul className="text-gray-700 space-y-2 mb-4">
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
-                    Baseboards and door frames cleaning
+                    Deep carpet extraction and stain removal
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
-                    Carpet deep cleaning
+                    Tile and grout cleaning and sanitizing
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
-                    Stone and marble floor polishing
+                    Wood floor polishing and shine restoration
                   </li>
                   <li className="flex items-center">
                     <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
-                    Floor buffing and shine restoration
+                    Vinyl and laminate cleaning and finishing
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-elizabeth-gold rounded-full mr-3"></div>
+                    Odor removal and deodorizing treatments
                   </li>
                 </ul>
+                <p className="text-gray-600 mb-6 leading-relaxed italic">
+                  We use advanced techniques and gentle products to preserve your surfaces and ensure long-lasting results.
+                </p>
                 <Link href="/contact">
                   <Button className="w-full bg-black hover:bg-gray-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200">
                     Get Quote
