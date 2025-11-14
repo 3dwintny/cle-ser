@@ -31,28 +31,28 @@ export default function Home() {
       name: "Jenny Moya",
       date: "A year ago",
       rating: 5,
-      text: "Hired Elizabeth's cleaning services for my house and I really like overall their services. Very punctual and professional, I love that the product being used does not damage any of my furniture. My bathroom is spotless now, the shower glass had stains for years and now it looks brand new, very shining.",
+      text: "Hired Elizabeths cleaning service for my house and I really like overall their service. Very punctual and professional, I love that the product being used does not damage any of my furniture. My bathroom is spotless now, the shower glass had stains for years and now it looks brand new, very shining.",
       initial: "J"
     },
     {
       name: "Yvonne Williams",
       date: "A year ago",
       rating: 5,
-      text: "I am positively thrilled that a good friend recommended them to me. Elizabeth's Cleaning Service is detail oriented and so cheerful while they do an outstanding job! When they are done cleaning, my home smells wonderful and not full of strong chemicals.",
+      text: "I am positively thrilled that a good friend recommended them to me. Elizabeths Cleaning Service is detail oriented and so cheerful while they do an outstanding job! When they are done cleaning, my home smells wonderful and not full of strong chemicals.",
       initial: "Y"
     },
     {
       name: "Natali Alvarez",
       date: "A year ago",
       rating: 5,
-      text: "Elizabeth's cleaning services are extremely professional, friendly and efficient. You can tell they care about their clients by the quality of work they provide. They always do an outstanding job, and I'm never disappointed with their work.",
+      text: "Elizabeths cleaning service is extremely professional, friendly and efficient. You can tell they care about their clients by the quality of work they provide. They always do an outstanding job, and I'm never disappointed with their work.",
       initial: "N"
     },
     {
       name: "Tammy Boren",
       date: "A year ago",
       rating: 5,
-      text: "The ladies at Elizabeth Cleaning Service really care & do amazing job. They feel like part of the family now. They take pride in their work & the level of detail is so appreciated. They have so many magic tricks to address hard to clean or problem areas.",
+      text: "The ladies at Elizabeths Cleaning Service really care & do amazing job. They feel like part of the family now. They take pride in their work & the level of detail is so appreciated. They have so many magic tricks to address hard to clean or problem areas.",
       initial: "T"
     }
   ];
@@ -212,7 +212,7 @@ export default function Home() {
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-black mb-4">Residential Cleaning</h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">
-                  Experience the comfort of a spotless home with Elizabeth Cleaning Services. Our professional team provides meticulous cleaning solutions designed to refresh every corner of your home. We combine attention to detail with care and discretion, ensuring a clean, welcoming, and harmonious environment.
+                  Experience the comfort of a spotless home with Elizabeths Cleaning Service. Our professional team provides meticulous cleaning solutions designed to refresh every corner of your home. We combine attention to detail with care and discretion, ensuring a clean, welcoming, and harmonious environment.
                 </p>
                 <p className="text-gray-700 font-semibold mb-3">Our Residential Cleaning includes:</p>
                 <ul className="text-gray-700 space-y-2 mb-4">
@@ -267,7 +267,7 @@ export default function Home() {
               <div className="p-8">
                 <h3 className="text-2xl font-bold text-black mb-4">Commercial Cleaning</h3>
                 <p className="text-gray-600 mb-4 leading-relaxed">
-                  At Elizabeth Cleaning Services, we understand that a clean workspace reflects professionalism and inspires productivity. Our commercial cleaning programs are designed for offices, stores, and business facilities of all sizes. We maintain your space in pristine condition so your clients and team can focus on what truly matters.
+                  At Elizabeths Cleaning Service, we understand that a clean workspace reflects professionalism and inspires productivity. Our commercial cleaning programs are designed for offices, stores, and business facilities of all sizes. We maintain your space in pristine condition so your clients and team can focus on what truly matters.
                 </p>
                 <p className="text-gray-700 font-semibold mb-3">Our Commercial Cleaning includes:</p>
                 <ul className="text-gray-700 space-y-2 mb-4">

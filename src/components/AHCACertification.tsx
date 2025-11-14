@@ -73,7 +73,7 @@ export default function AHCACertification({ bgWhite = false }: AHCACertification
                 </h2>
                 
                 <p className="text-xl text-black/80 leading-relaxed">
-                  <span className="font-bold text-black">Elizabeth&apos;s Cleaning Services, LLC</span> holds professional certification from the 
+                  <span className="font-bold text-black">Elizabeths Cleaning Service LLC</span> holds professional certification from the 
                   <span className="font-bold text-black"> American House Cleaners Association</span>—a nationally recognized organization dedicated to advancing professional standards and best practices in the residential and commercial cleaning industry.
                 </p>
               </div>

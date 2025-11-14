@@ -5,7 +5,7 @@ import { Card, CardHeader } from '@/components/Card';
 import AHCACertification from '@/components/AHCACertification';
 
 export default function AboutPage() {
-  const ourStory = `Founded in Pico Rivera, California, Elizabeth's Cleaning Services, LLC began with a simple vision: to provide professional cleaning services that transform homes and workplaces into spaces of comfort and productivity.
+  const ourStory = `Founded in Pico Rivera, California, Elizabeths Cleaning Service LLC began with a simple vision: to provide professional cleaning services that transform homes and workplaces into spaces of comfort and productivity.
 
 What started as a local operation has grown into a trusted partner for residential and commercial cleaning throughout Los Angeles County. Our success is built on meticulous attention to detail, genuine care for every space we touch, and lasting relationships with our clients who value quality and reliability.`;
 

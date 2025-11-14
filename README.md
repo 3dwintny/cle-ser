@@ -247,9 +247,9 @@ This project is proprietary. All rights reserved.
 ## 📞 Support
 
 For support or questions:
-- Email: info@elizabethscleaning.com
-- Phone: (562) 433-2390
-- WhatsApp: +1-562-433-2390
+- Email: elizabethscleaningservice7@gmail.com
+- Phone: (562) 639-2990
+- WhatsApp: +1-562-639-2990
 
 ## 🔄 Updates
 

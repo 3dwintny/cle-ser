@@ -17,32 +17,32 @@ const notoSansThai = Noto_Sans_Thai({
 });
 
 export const metadata: Metadata = {
-  title: "Elizabeth's Cleaning Services, LLC - Professional Cleaning Services",
+  title: "Elizabeths Cleaning Service LLC - Professional Cleaning Services",
   description: "We scrub, you relax — it's that simple. Professional residential and office cleaning services with exceptional quality and care.",
   keywords: "cleaning service, house cleaning, office cleaning, maid service, professional cleaning",
-  authors: [{ name: "Elizabeth's Cleaning Services, LLC" }],
-  creator: "Elizabeth's Cleaning Services, LLC",
-  publisher: "Elizabeth's Cleaning Services, LLC",
+  authors: [{ name: "Elizabeths Cleaning Service LLC" }],
+  creator: "Elizabeths Cleaning Service LLC",
+  publisher: "Elizabeths Cleaning Service LLC",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://elizabethscleaning.com'),
+  metadataBase: new URL('https://elizabethscleanservices.com'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: "Elizabeth's Cleaning Services, LLC - Professional Cleaning Services",
+    title: "Elizabeths Cleaning Service LLC - Professional Cleaning Services",
     description: "We scrub, you relax — it's that simple. Professional residential and office cleaning services with exceptional quality and care.",
-    url: 'https://elizabethscleaning.com',
-    siteName: "Elizabeth's Cleaning Services, LLC",
+    url: 'https://elizabethscleanservices.com',
+    siteName: "Elizabeths Cleaning Service LLC",
     images: [
       {
         url: '/favicons/logo-social.png',
         width: 512,
         height: 512,
-        alt: "Elizabeth's Cleaning Services, LLC",
+        alt: "Elizabeths Cleaning Service LLC",
       },
     ],
     locale: 'en_US',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Elizabeth's Cleaning Services, LLC - Professional Cleaning Services",
+    title: "Elizabeths Cleaning Service LLC - Professional Cleaning Services",
     description: "We scrub, you relax — it's that simple. Professional residential and office cleaning services.",
     images: ['/favicons/logo-social.png'],
   },
@@ -75,9 +75,9 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Elizabeth's Cleaning Services, LLC",
+    "name": "Elizabeths Cleaning Service LLC",
     "description": "Professional residential and office cleaning services with exceptional quality and care.",
-    "url": "https://elizabethscleaning.com",
+    "url": "https://elizabethscleanservices.com",
     "telephone": "+1-562-639-2990",
     "address": {
       "@type": "PostalAddress",
@@ -100,9 +100,9 @@ export default function RootLayout({
     ],
     "areaServed": "Los Angeles County",
     "sameAs": [
-      "https://www.facebook.com/elizabethscleaning",
-      "https://www.instagram.com/elizabethscleaning",
-      "https://twitter.com/elizabethclean"
+      "https://www.facebook.com/profile.php?id=100083328251594&mibextid=wwXIfr&mibextid=wwXIfr",
+      "https://www.instagram.com/elizabeth__cleaning?igsh=NTc4MTIwNjQ2YQ%3D%3D&utm_source=qr",
+      "https://www.tiktok.com/@elizabethcleaningllc?_t=ZP-90fNQLdHu3z&_r=1"
     ]
   };
 

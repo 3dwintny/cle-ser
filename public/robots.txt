@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://elizabethscleaning.com/sitemap.xml
+Sitemap: https://elizabethscleanservices.com/sitemap.xml

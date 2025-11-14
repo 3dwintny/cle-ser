@@ -57,7 +57,7 @@ export default function Footer() {
               {!logoError ? (
                 <Image
                   src="/LOGOS/logo-en-blanco.png"
-                  alt="Elizabeth's Cleaning Services, LLC"
+                  alt="Elizabeths Cleaning Service LLC"
                   width={288}
                   height={72}
                   className="h-14 w-auto sm:h-18 max-w-72"
