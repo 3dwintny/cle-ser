@@ -105,19 +105,12 @@ export default function Home() {
                  style={{ 
                    textShadow: '0 0 15px rgba(0,0,0,0.7), 0 0 30px rgba(0,0,0,0.5), 1px 1px 1px rgba(0,0,0,0.8), -1px -1px 1px rgba(0,0,0,0.8)'
                  }}>
-                Professional Home & Office Cleaning Services
+                Premium Residential & Commercial Cleaning
               </p>
               
               {/* Description */}
               <div className="mb-8">
-                    <p className="text-xl sm:text-2xl font-bold text-yellow-300 mb-4" 
-                       style={{ 
-                         textShadow: '0 0 15px rgba(0,0,0,0.8), 1px 1px 2px rgba(0,0,0,1), -1px -1px 2px rgba(0,0,0,1)'
-                       }}>
-                      Premium Residential & Commercial Cleaning
-                    </p>
-                    
-                    <p className="text-lg text-white leading-relaxed mb-4" 
+                    <p className="text-lg text-white leading-relaxed" 
                        style={{ 
                          textShadow: '0 0 15px rgba(0,0,0,0.7), 1px 1px 1px rgba(0,0,0,0.9), -1px -1px 1px rgba(0,0,0,0.9)'
                        }}>
