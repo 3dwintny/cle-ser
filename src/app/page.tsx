@@ -110,16 +110,25 @@ export default function Home() {
               
               {/* Description */}
               <div className="mb-8">
-                    <p className="text-lg text-white leading-relaxed" 
+                    <p className="text-xl sm:text-2xl font-bold text-yellow-300 mb-4" 
+                       style={{ 
+                         textShadow: '0 0 15px rgba(0,0,0,0.8), 1px 1px 2px rgba(0,0,0,1), -1px -1px 2px rgba(0,0,0,1)'
+                       }}>
+                      Premium Residential & Commercial Cleaning
+                    </p>
+                    
+                    <p className="text-lg text-white leading-relaxed mb-4" 
                        style={{ 
                          textShadow: '0 0 15px rgba(0,0,0,0.7), 1px 1px 1px rgba(0,0,0,0.9), -1px -1px 1px rgba(0,0,0,0.9)'
                        }}>
-                      <span className="font-semibold text-yellow-300" 
-                            style={{ 
-                              textShadow: '0 0 15px rgba(0,0,0,0.8), 1px 1px 2px rgba(0,0,0,1), -1px -1px 2px rgba(0,0,0,1)'
-                            }}>
-                        Trusted cleaning
-                      </span> for your home and office. Our professional team guarantees exceptional service with eco-friendly products and advanced techniques. <span className="font-semibold text-white">Your perfect space, every visit!</span>
+                      Experience trusted, professional cleaning for your home or business. Our expert team ensures exceptional results using eco-friendly products and advanced techniques.
+                    </p>
+                    
+                    <p className="text-lg font-semibold text-white" 
+                       style={{ 
+                         textShadow: '0 0 15px rgba(0,0,0,0.7), 1px 1px 1px rgba(0,0,0,0.9), -1px -1px 1px rgba(0,0,0,0.9)'
+                       }}>
+                      Spotless spaces. Every time.
                     </p>
               </div>
 
