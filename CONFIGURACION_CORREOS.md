@@ -1,4 +1,4 @@
-# 📧 Configuración de Correos - Elizabeth's Cleaning
+# 📧 Configuración de Correos - Elizabeths Cleaning Service LLC
 
 ## ¿Dónde llegan los mensajes del formulario?
 

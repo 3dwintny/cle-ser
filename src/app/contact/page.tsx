@@ -110,7 +110,7 @@ export default function ContactPage() {
           email: formData.email,
           phone: formData.phone || 'Not provided',
           message: formData.message,
-          _subject: `New Contact - Elizabeth's Cleaning - ${formData.name}`,
+          _subject: `New Contact - Elizabeths Cleaning Service - ${formData.name}`,
           _template: 'table',
           _captcha: 'false'
         })

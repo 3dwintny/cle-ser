@@ -70,7 +70,7 @@ export default function Footer() {
                 />
               ) : (
                 <span className="text-xl font-bold text-blue-500">
-                  Elizabeth&apos;s Cleaning
+                  Elizabeths Cleaning
                 </span>
               )}
             </Link>
@@ -141,7 +141,7 @@ export default function Footer() {
             })}
           </div>
           <p className="text-gray-300 text-sm">
-            © {currentYear} Elizabeth&apos;s Cleaning Services, LLC. All rights reserved.
+            © {currentYear} Elizabeths Cleaning Service LLC. All rights reserved.
           </p>
         </div>
       </div>

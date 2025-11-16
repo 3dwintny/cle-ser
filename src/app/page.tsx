@@ -99,7 +99,7 @@ export default function Home() {
                   style={{ 
                     textShadow: '0 0 20px rgba(0,0,0,0.8), 0 0 40px rgba(0,0,0,0.6), 1px 1px 2px rgba(0,0,0,0.9), -1px -1px 2px rgba(0,0,0,0.9), 1px -1px 2px rgba(0,0,0,0.9), -1px 1px 2px rgba(0,0,0,0.9)'
                   }}>
-                Elizabeth&apos;s Cleaning Services, LLC
+                Elizabeths Cleaning Service LLC
               </h1>
               <p className="text-xl sm:text-2xl text-white mb-6" 
                  style={{ 
@@ -153,7 +153,7 @@ export default function Home() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <p className="text-2xl sm:text-3xl font-medium text-black">
-            Elizabeth&apos;s Cleaning Services, LLC — Relax — we&apos;ll handle the cleaning.
+            Elizabeths Cleaning Service LLC — Relax — we&apos;ll handle the cleaning.
           </p>
           <div className="w-24 h-1 bg-red-600 mx-auto mt-4 mb-12"></div>
           
@@ -548,7 +548,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
-              Why Choose Elizabeth&apos;s Cleaning Services, LLC?
+              Why Choose Elizabeths Cleaning Service LLC?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               We&apos;re more than just a cleaning service - we&apos;re your trusted cleaning partner

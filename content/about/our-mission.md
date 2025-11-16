@@ -1,6 +1,6 @@
 # Our Mission
 
-At Elizabeth's Cleaning Service, our mission is to elevate the quality of life for our clients by delivering exceptional cleaning services that combine professional expertise, eco-friendly practices, and genuine care for every space we touch.
+At Elizabeths Cleaning Service LLC, our mission is to elevate the quality of life for our clients by delivering exceptional cleaning services that combine professional expertise, eco-friendly practices, and genuine care for every space we touch.
 
 ## Our Core Values
 
@@ -18,6 +18,6 @@ Building lasting relationships requires honesty, reliability, and clear communic
 
 ## Our Promise
 
-When you choose Elizabeth's Cleaning Service, you're not just hiring cleaners – you're gaining partners in maintaining spaces that support your well-being, productivity, and peace of mind. We stand behind our work with a satisfaction guarantee and our commitment to continuous improvement.
+When you choose Elizabeths Cleaning Service LLC, you're not just hiring cleaners – you're gaining partners in maintaining spaces that support your well-being, productivity, and peace of mind. We stand behind our work with a satisfaction guarantee and our commitment to continuous improvement.
 
 Together, let's create spaces that inspire, comfort, and energize – one clean surface at a time.

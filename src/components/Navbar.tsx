@@ -66,7 +66,7 @@ export default function Navbar() {
                     ? 'text-white hover:opacity-80' 
                     : 'text-black hover:opacity-80'
                 )}>
-                  Elizabeth&apos;s Cleaning
+                  Elizabeths Cleaning
                 </span>
               )}
             </Link>

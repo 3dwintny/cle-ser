@@ -21,7 +21,7 @@ body {
   font-family: Mukta, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* Elizabeth's Brand Color Utilities */
+/* Elizabeths Cleaning Service LLC Brand Color Utilities */
 .bg-elizabeth-gold {
   background-color: var(--elizabeth-gold) !important;
 }
@@ -42,7 +42,7 @@ body {
   border-color: var(--elizabeth-gold) !important;
 }
 
-/* Elizabeth's Gradient Utilities */
+/* Elizabeths Cleaning Service LLC Gradient Utilities */
 .bg-elizabeth-gradient-main {
   background: var(--elizabeth-gradient-main) !important;
 }
@@ -151,7 +151,7 @@ body {
   animation: fadeIn 0.3s ease-in-out;
 }
 
-/* 📱 Phone Input Personalizado - Elizabeth's Cleaning */
+/* 📱 Phone Input Personalizado - Elizabeths Cleaning Service LLC */
 .phone-input-container .react-tel-input .form-control {
   transition: all 0.3s ease;
 }

@@ -1,8 +1,8 @@
-# 🎨 Sistema de Colores Centralizado - Elizabeth's Cleaning Service
+# 🎨 Sistema de Colores Centralizado - Elizabeths Cleaning Service LLC
 
 ## 📋 Resumen
 
-Se ha implementado un sistema de colores centralizado para Elizabeth's Cleaning Service que facilita el mantenimiento y la consistencia visual en todo el sitio web.
+Se ha implementado un sistema de colores centralizado para Elizabeths Cleaning Service LLC que facilita el mantenimiento y la consistencia visual en todo el sitio web.
 
 ---
 
@@ -91,7 +91,7 @@ Se ha implementado un sistema de colores centralizado para Elizabeth's Cleaning 
 
 ```css
 :root {
-  /* Elizabeth's Cleaning Service Brand Colors */
+  /* Elizabeths Cleaning Service LLC Brand Colors */
   --elizabeth-gold: #ffbf00;        /* Color principal */
   --elizabeth-gold-light: #ffd700;  /* Variación clara */
   --elizabeth-gold-dark: #e6ac00;   /* Variación oscura */
@@ -139,7 +139,7 @@ background-color: var(--elizabeth-gold);  /* #ffbf00 - Dorado vibrante */
 ### **Hero Sections:**
 ```jsx
 <section className="relative py-32 bg-elizabeth-gold">
-  <h1>Elizabeth's Cleaning Service</h1>
+  <h1>Elizabeths Cleaning Service LLC</h1>
 </section>
 ```
 
@@ -232,4 +232,4 @@ background-color: var(--elizabeth-gold);  /* #ffbf00 - Dorado vibrante */
 
 ---
 
-**¡El sistema de colores centralizado está listo! Ahora puedes cambiar el color de Elizabeth's Cleaning Service desde un solo lugar.** 🎨✨
+**¡El sistema de colores centralizado está listo! Ahora puedes cambiar el color de Elizabeths Cleaning Service LLC desde un solo lugar.** 🎨✨

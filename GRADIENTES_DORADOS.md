@@ -1,4 +1,4 @@
-# 🌟 Sistema de Gradientes Dorados - Elizabeth's Cleaning Service
+# 🌟 Sistema de Gradientes Dorados - Elizabeths Cleaning Service LLC
 
 ## 📋 Resumen
 
@@ -55,7 +55,7 @@ Se ha implementado un sistema completo de gradientes dorados inspirado en las im
 ### **En HTML/JSX:**
 ```jsx
 <section className="bg-elizabeth-gradient-main">
-  <h1>Elizabeth's Cleaning Service</h1>
+  <h1>Elizabeths Cleaning Service LLC</h1>
 </section>
 ```
 

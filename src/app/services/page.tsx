@@ -147,7 +147,7 @@ export default function ServicesPage() {
             Ready to Experience the Difference?
           </h2>
           <p className="text-xl text-gray-800 mb-8">
-            Join our satisfied clients and discover why Elizabeth&apos;s Cleaning Services, LLC
+            Join our satisfied clients and discover why Elizabeths Cleaning Service LLC
             is the trusted choice for exceptional cleaning services.
           </p>
           <div className="flex justify-center">
